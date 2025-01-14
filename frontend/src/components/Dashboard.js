@@ -1,19 +1,38 @@
-import React, { useState } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import { runSimulation } from '../services/api';
 
+const initialState = {
+	stressLevel: 0.5,
+	results: null,
+	error: null,
+	isLoading: false
+};
+
+function reducer(state, action) {
+	switch (action.type) {
+		case 'SET_STRESS_LEVEL':
+			return { ...state, stressLevel: action.payload };
+		case 'RUN_SIMULATION':
+			return { ...state, isLoading: true, error: null };
+		case 'SET_RESULTS':
+			return { ...state, results: action.payload, isLoading: false };
+		case 'SET_ERROR':
+			return { ...state, error: action.payload, isLoading: false };
+		default:
+			return state;
+	}
+}
+
 const Dashboard = () => {
-	const [stressLevel, setStressLevel] = useState(0.5);	// Initial stress level
-	const [results, setResults] = useState(null);	// Results from the API
-	const [error, setError] = useState(null);	// Error state
+	const [state, dispatch] = useReducer(reducer, initialState);	
 
 	const handleRunSimulation = async () => {
+		dispatch({ type: 'RUN_SIMULATION' });
 		try {
-			setError(null);	// Reset any previous error
-			const data = { stress_level: stressLevel };
-			const simulationResults = await runSimulation(data); 	// Call the API
-			setResults(simulationResults);	// Upddate results state
+			const simulationResults = await runSimulation({ stress_level: state.stressLevel });
+			dispatch({ type: 'SET_RESULTS', payload: simulationResults });
 		} catch (err) {
-			setError('Failed to fetch simulation results. Please try again.');
+			dispatch({ type: 'SET_ERROR', payload: 'Failed to fetch simulation results. Please try again.' });
 		}
 	};
 	
