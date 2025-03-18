@@ -1,0 +1,25 @@
+name: Generate Project Tree
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-tree:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Install tree
+        run: sudo apt-get install -y tree
+
+      - name: Generate Project Structure
+        run: tree > project_structure.txt
+
+      - name: Upload Project Structure
+        uses: actions/upload-artifact@v2
+        with:
+          name: project-structure
+          path: project_structure.txt

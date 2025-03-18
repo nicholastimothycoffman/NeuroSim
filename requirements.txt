@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+openai
+langchain
+transformers
+faiss-cpu
+chromadb
+pinecone-client
+sqlalchemy
+psycopg2-binary

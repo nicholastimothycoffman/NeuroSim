@@ -1,0 +1,5 @@
+.
+├── generate-tree.yml
+└── project_structure.txt
+
+1 directory, 2 files
