@@ -1,5 +1,6 @@
 fastapi
-uvicorn[standard]
+flask
+django
 openai
 langchain
 transformers
@@ -8,3 +9,7 @@ chromadb
 pinecone-client
 sqlalchemy
 psycopg2-binary
+docker
+kubernetes
+boto3
+azure

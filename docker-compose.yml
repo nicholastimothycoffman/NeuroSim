@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+	fastapi:
+		build:
+		ports:
+			- "8000:8000"
+		environment:
+			- OPENAI_API_KEY=openai_api_key
+			- PINECONE_API_KEY=pinecone_api_key
+	flask:
+		build:
+		ports:
+			- "5000:5000"
+		environment:
+			- OPENAI_API_KEY=openai_api_key
+	django:
+		build:
+		ports:
+			- "8001:8001"
+		environment:
+			- OPENAI_API_KEY=openai_api_key

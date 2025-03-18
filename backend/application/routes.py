@@ -1,12 +1,25 @@
-from flask import Blueprint, request, jsonify
+from fastapi import APIRouter
+from pydantic import BaseModel
 from simulation import simulate_brain_activity
+from utils import generate_openai_response, retrieve_documents
 
-simulation_routes = Blueprint("simulation_routes", __name__)
+class Query(BaseModel):
+	text: str
 
-@simulation_routes.route("/simulation", methods=["POST"])
-def run_simulation():
-	data = request.json
-	print("Request data:", data)	# Log the received data
+router = APIRouter()
+
+@router.post("/generate")
+async def generate_response(query: Query):
+	response = generate_openai_response(query.text)
+	return {"response": response}
+
+@router.post("/simulation")
+async def run_simulation(query: Query):
+	data = query.dict()
 	result = simulate_brain_activity(data)
-	print("Simulation result:", result)	# Log the result of the simulation
-	return jsonify(result)
+	return result
+
+@router.post("/retrieve")
+async def retrieve(query: Query):
+	documents = retrieve_documents(query.text)
+	return {"documents": documents}
