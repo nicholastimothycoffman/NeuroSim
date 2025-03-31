@@ -1,0 +1,13 @@
+{
+  "state": "stress",
+  "brain_regions": [
+    {"name": "Amygdala", "intensity": "high"},
+    {"name": "Prefrontal Cortex", "intensity": "low"}
+  ],
+  "ai_modules": [
+    {"name": "CPU Usage", "value": "95%"},
+    {"name": "Dropped Requests", "value": "23"}
+  ],
+  "explanation": "Stress simulates system overload and resource contention."
+}
+
