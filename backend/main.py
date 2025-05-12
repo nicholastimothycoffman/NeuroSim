@@ -19,4 +19,4 @@ def get_state(state_name: str):
 		with open(f"backend/data/{state_name}.json") as f:
 			return json.load(f)
 	except FileNotFoundError:
-		return {"error": "State not found"}
+		return {"error": f"State '{state_name}' not found in backend/data"}
