@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "visual_cortex",
+      "activation": 0.9
+    },
+    {
+      "name": "prefrontal_cortex",
+      "activation": 0.3
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "dopamine_cycle",
+      "state": "blunted"
+    },
+    {
+      "name": "attention_span",
+      "state": "fragmented"
+    }
+  ]
+}

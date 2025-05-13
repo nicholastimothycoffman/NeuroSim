@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "hypothalamus",
+      "activation": 0.8
+    },
+    {
+      "name": "insula",
+      "activation": 0.6
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "energy_spike",
+      "state": "followed_by_crash"
+    },
+    {
+      "name": "mood_stability",
+      "state": "fragile"
+    }
+  ]
+}

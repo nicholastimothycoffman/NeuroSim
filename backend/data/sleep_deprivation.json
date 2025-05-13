@@ -1,0 +1,26 @@
+{
+  "regions": [
+    {
+      "name": "hypothalamus",
+      "activation": 0.7
+    },
+    {
+      "name": "prefrontal_cortex",
+      "activation": 0.2
+    },
+    {
+      "name": "parietal_lobe",
+      "activation": 0.3
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "cognitive_stability",
+      "state": "unstable"
+    },
+    {
+      "name": "memory_consolidation",
+      "state": "inactive"
+    }
+  ]
+}

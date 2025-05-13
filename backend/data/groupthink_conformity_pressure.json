@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "prefrontal_cortex",
+      "activation": 0.4
+    },
+    {
+      "name": "insula",
+      "activation": 0.6
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "individual_judgment",
+      "state": "muted"
+    },
+    {
+      "name": "social_alignment",
+      "state": "maximized"
+    }
+  ]
+}

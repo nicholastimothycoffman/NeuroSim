@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "motor_cortex",
+      "activation": 0.7
+    },
+    {
+      "name": "hypothalamus",
+      "activation": 0.6
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "endorphin_release",
+      "state": "active"
+    },
+    {
+      "name": "stress",
+      "state": "reduced"
+    }
+  ]
+}

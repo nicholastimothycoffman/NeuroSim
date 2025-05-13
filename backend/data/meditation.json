@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "default_mode_network",
+      "activation": 0.2
+    },
+    {
+      "name": "anterior_cingulate",
+      "activation": 0.6
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "mind_wandering",
+      "state": "off"
+    },
+    {
+      "name": "awareness",
+      "state": "heightened"
+    }
+  ]
+}

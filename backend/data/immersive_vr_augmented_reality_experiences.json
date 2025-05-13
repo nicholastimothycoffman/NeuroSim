@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "parietal_lobe",
+      "activation": 0.8
+    },
+    {
+      "name": "visual_cortex",
+      "activation": 0.9
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "presence",
+      "state": "strong"
+    },
+    {
+      "name": "reality_monitoring",
+      "state": "challenged"
+    }
+  ]
+}

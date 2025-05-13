@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "prefrontal_cortex",
+      "activation": 0.95
+    },
+    {
+      "name": "hippocampus",
+      "activation": 0.6
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "working_memory",
+      "state": "overloaded"
+    },
+    {
+      "name": "decision_making",
+      "state": "sluggish"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "default_mode_network",
+      "activation": 0.75
+    },
+    {
+      "name": "temporal_lobe",
+      "activation": 0.85
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "associative_thinking",
+      "state": "active"
+    },
+    {
+      "name": "inhibition",
+      "state": "reduced"
+    }
+  ]
+}

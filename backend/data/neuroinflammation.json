@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "glial_cells",
+      "activation": 0.95
+    },
+    {
+      "name": "hippocampus",
+      "activation": 0.5
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "neural_efficiency",
+      "state": "reduced"
+    },
+    {
+      "name": "fog",
+      "state": "present"
+    }
+  ]
+}

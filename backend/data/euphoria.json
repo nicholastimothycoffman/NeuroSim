@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "nucleus_accumbens",
+      "activation": 0.95
+    },
+    {
+      "name": "amygdala",
+      "activation": 0.6
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "reward_pathways",
+      "state": "surging"
+    },
+    {
+      "name": "threat_processing",
+      "state": "dormant"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "prefrontal_cortex",
+      "activation": 0.9
+    },
+    {
+      "name": "parietal_lobe",
+      "activation": 0.8
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "attention_tunnel",
+      "state": "narrowed"
+    },
+    {
+      "name": "external_awareness",
+      "state": "suppressed"
+    }
+  ]
+}

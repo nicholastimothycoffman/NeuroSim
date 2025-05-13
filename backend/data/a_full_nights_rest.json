@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "thalamus",
+      "activation": 0.4
+    },
+    {
+      "name": "hippocampus",
+      "activation": 0.9
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "memory_consolidation",
+      "state": "restored"
+    },
+    {
+      "name": "fatigue",
+      "state": "reset"
+    }
+  ]
+}

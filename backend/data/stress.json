@@ -1,0 +1,26 @@
+{
+  "regions": [
+    {
+      "name": "amygdala",
+      "activation": 0.85
+    },
+    {
+      "name": "prefrontal_cortex",
+      "activation": 0.4
+    },
+    {
+      "name": "hippocampus",
+      "activation": 0.5
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "threat_analysis",
+      "state": "active"
+    },
+    {
+      "name": "planning",
+      "state": "suppressed"
+    }
+  ]
+}

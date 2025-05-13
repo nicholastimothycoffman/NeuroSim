@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "anterior_cingulate",
+      "activation": 0.8
+    },
+    {
+      "name": "amygdala",
+      "activation": 0.7
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "conflict_monitoring",
+      "state": "high"
+    },
+    {
+      "name": "impulse_control",
+      "state": "strained"
+    }
+  ]
+}

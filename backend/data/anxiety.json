@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "amygdala",
+      "activation": 0.95
+    },
+    {
+      "name": "insula",
+      "activation": 0.7
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "threat_vigilance",
+      "state": "hyperactive"
+    },
+    {
+      "name": "rational_filter",
+      "state": "weak"
+    }
+  ]
+}

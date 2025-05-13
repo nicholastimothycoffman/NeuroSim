@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "default_mode_network",
+      "activation": 0.2
+    },
+    {
+      "name": "visual_cortex",
+      "activation": 0.95
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "self_boundary",
+      "state": "dissolved"
+    },
+    {
+      "name": "perception",
+      "state": "altered"
+    }
+  ]
+}

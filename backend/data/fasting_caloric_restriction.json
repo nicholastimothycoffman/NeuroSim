@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "hypothalamus",
+      "activation": 0.7
+    },
+    {
+      "name": "hippocampus",
+      "activation": 0.6
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "alertness",
+      "state": "heightened"
+    },
+    {
+      "name": "energy_availability",
+      "state": "low"
+    }
+  ]
+}

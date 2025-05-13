@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "reticular_formation",
+      "activation": 0.9
+    },
+    {
+      "name": "prefrontal_cortex",
+      "activation": 0.6
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "alertness",
+      "state": "boosted"
+    },
+    {
+      "name": "fatigue_signals",
+      "state": "suppressed"
+    }
+  ]
+}

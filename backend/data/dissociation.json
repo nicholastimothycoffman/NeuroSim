@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "insula",
+      "activation": 0.2
+    },
+    {
+      "name": "parietal_lobe",
+      "activation": 0.3
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "self_identification",
+      "state": "disrupted"
+    },
+    {
+      "name": "emotional_processing",
+      "state": "numbed"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "somatosensory_cortex",
+      "activation": 0.9
+    },
+    {
+      "name": "anterior_cingulate",
+      "activation": 0.8
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "nociception",
+      "state": "active"
+    },
+    {
+      "name": "coping",
+      "state": "varied"
+    }
+  ]
+}

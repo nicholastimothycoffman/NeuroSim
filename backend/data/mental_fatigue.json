@@ -1,0 +1,26 @@
+{
+  "regions": [
+    {
+      "name": "prefrontal_cortex",
+      "activation": 0.3
+    },
+    {
+      "name": "thalamus",
+      "activation": 0.4
+    },
+    {
+      "name": "anterior_cingulate",
+      "activation": 0.5
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "attention_control",
+      "state": "degraded"
+    },
+    {
+      "name": "working_memory",
+      "state": "sluggish"
+    }
+  ]
+}

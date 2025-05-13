@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "default_mode_network",
+      "activation": 0.3
+    },
+    {
+      "name": "insula",
+      "activation": 0.5
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "suggestibility",
+      "state": "increased"
+    },
+    {
+      "name": "self_agency",
+      "state": "modulated"
+    }
+  ]
+}

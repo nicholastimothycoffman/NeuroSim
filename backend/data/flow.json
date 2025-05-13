@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "name": "prefrontal_cortex",
+      "activation": 0.8
+    },
+    {
+      "name": "motor_cortex",
+      "activation": 0.9
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "focus",
+      "state": "locked"
+    },
+    {
+      "name": "self_awareness",
+      "state": "reduced"
+    }
+  ]
+}
