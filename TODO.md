@@ -6,10 +6,8 @@
 - [x] Established and documented the expected JSON format (`regions` + `ai_modules`)
 - [x] Created 29 example cognitive state `.json` files using a utility script
 - [x] Implemented `generate_cognitive_states.py` to automate state data creation
-
-## In Progress
-- [ ] Fix logic in `<BrainDiagram>` and `<AISystemDiagram>` components to correctly render incoming data
-- [ ] Add graceful handling for loading states or invalid state data (e.g. show "Loading..." or "State not found")
+- [x] Fixed logic in `<BrainDiagram>` and `<AISystemDiagram>` components to correctly render incoming data
+- [x] Added graceful handling for loading states or invalid state data (e.g. fallback text)
 
 ## Next Steps
 - [ ] Add visual representation (SVG, Canvas, or D3.js) for brain regions in `BrainDiagram.jsx`
@@ -21,5 +19,5 @@
 ---
 
 **Current Status**:  
-Data is confirmed to load from backend → frontend, but visual rendering logic in diagram components needs debugging or implementation.
+Data is now flowing from backend → frontend and renders correctly in both diagrams. Focus can shift to visual and interactive enhancements.
 
