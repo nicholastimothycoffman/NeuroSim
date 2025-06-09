@@ -20,25 +20,25 @@ const AISystemDiagram = ({ data }) => {
                                         <NodeLink modules={data.ai_modules} />
                                 </section>
 
-                               {/* <section>
+                               <section>
                                         <h3 className="text-lg font-semibold mb-2">Radial Connectome</h3>
                                         <RadialConnectome modules={data.ai_modules} />
-                                </section> */}
+                                </section>
 
-                              {/* <section>
+                              <section>
                                         <h3 className="text-lg font-semibold mb-2">Heatmap over Silhouette</h3>
                                         <HeatmapSilhouette modules={data.ai_modules} />
-                                </section> */}
+                                </section>
 
-                              {/* <section>
+                              <section>
                                         <h3 className="text-lg font-semibold mb-2">Layered Neural Model</h3>
                                         <LayeredNetwork modules={data.ai_modules} />
-                                </section> */}
+                                </section>
 
-                               {/* <section>
+                               <section>
                                         <h3 className="text-lg font-semibold mb-2">Cortex-Like Folded Sheet</h3>
                                         <CortexSheet modules={data.ai_modules} />
-                                </section> */}
+                                </section>
                         </div>
                 </div>
         )
