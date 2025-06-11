@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "self_boundary",
-      "state": "dissolved"
+      "activation": 0.0
     },
     {
       "name": "perception",
-      "state": "altered"
+      "activation": 0.0
     }
   ]
 }

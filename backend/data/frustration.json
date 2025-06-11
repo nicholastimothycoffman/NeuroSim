@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "conflict_monitoring",
-      "state": "high"
+      "activation": 0.0
     },
     {
       "name": "impulse_control",
-      "state": "strained"
+      "activation": 0.0
     }
   ]
 }

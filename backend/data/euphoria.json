@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "reward_pathways",
-      "state": "surging"
+      "activation": 0.0
     },
     {
       "name": "threat_processing",
-      "state": "dormant"
+      "activation": 0.0
     }
   ]
 }

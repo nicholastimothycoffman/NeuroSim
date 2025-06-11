@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "dream_awareness",
-      "state": "present"
+      "activation": 0.0
     },
     {
       "name": "volitional_control",
-      "state": "partial"
+      "activation": 0.0
     }
   ]
 }

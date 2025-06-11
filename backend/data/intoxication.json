@@ -16,11 +16,11 @@
   "ai_modules": [
     {
       "name": "motor_control",
-      "state": "impaired"
+      "activation": 0.0
     },
     {
       "name": "impulse_regulation",
-      "state": "inactive"
+      "activation": 0.0
     }
   ]
 }

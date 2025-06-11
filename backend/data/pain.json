@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "nociception",
-      "state": "active"
+      "activation": 0.9
     },
     {
       "name": "coping",
-      "state": "varied"
+      "activation": 0.0
     }
   ]
 }

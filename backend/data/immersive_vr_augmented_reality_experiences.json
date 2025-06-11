@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "presence",
-      "state": "strong"
+      "activation": 0.0
     },
     {
       "name": "reality_monitoring",
-      "state": "challenged"
+      "activation": 0.0
     }
   ]
 }

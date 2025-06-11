@@ -1,0 +1,33 @@
+# NeuroSim TODO ## ✅ Completed - [x] Verified that backend `/api/state/{state_name}` is 
+functioning correctly - [x] Confirmed frontend `App.jsx` fetches state data and passes it 
+to diagram components - [x] Established and documented the expected JSON format 
+(`regions` + `ai_modules`) - [x] Created 29 example cognitive state `.json` files using a 
+utility script - [x] Implemented `generate_cognitive_states.py` to automate state data 
+creation - [x] Fixed logic in `<BrainDiagram>` and `<AISystemDiagram>` components to 
+correctly render incoming data - [x] Added graceful handling for loading states or 
+invalid state data (e.g. fallback text) - [x] Integrated `StateSelector` dropdown with 
+the full list of cognitive states - [x] Defined long-term visual layout plan (brain: 
+lateral/medial; AI: 5-fold representation) - [x] Scaffolded `BrainDiagram/` 
+subcomponents: `LateralView`, `MedialView`, and wrapper - [x] Scaffolded 
+`AISystemDiagram/` with five placeholder components for alternate visual representations 
+- [x] Repaired and verified correct frontend file layout (`index.html`, `main.jsx`) - [x] 
+Confirmed frontend renders selector and loading UI in default state - [x] Updated 
+`App.jsx` to conditionally render brain and AI components only when data is loaded - [x] 
+Confirmed `LateralView.jsx` and `MedialView.jsx` mount without errors - [x] Began 
+debugging live data rendering paths using console logging ## 🔧 In Progress - [ ] Ensure 
+region name strings from JSON align with frontend `regionPositions` mapping - [ ] Confirm 
+final shape and content of incoming JSON (e.g. `stress.json`) - [ ] Replace placeholder 
+SVGs with meaningful, data-driven render logic (AI + brain) - [ ] Define interactivity 
+design pattern (e.g. hover → tooltip, click → detail view) ## 🔜 Next Steps - [ ] 
+Implement dynamic region rendering in `LateralView.jsx` (visual anatomy + activation) - [ 
+] Implement dynamic region rendering in `MedialView.jsx` - [ ] Validate `.json` input 
+parsing and region matching across all states - [ ] Animate transitions between cognitive 
+states (e.g. fading, color morph, motion) - [ ] Add metadata descriptions to each 
+cognitive state (for UI tooltips or detail panels) - [ ] Optionally expose `/api/states` 
+endpoint to dynamically list cognitive states - [ ] Add responsive layout wrapper for 
+brain vs. AI system side-by-side presentation - [ ] Centralize color logic (e.g. 
+`getFillColor()`) into a shared utility module --- **Current Status**: Frontend and 
+backend are synchronized and stable. Cognitive state data is loading correctly. Diagrams 
+are mounted but not yet rendering meaningful region/module visuals from live data. 
+Immediate focus is on verifying JSON compatibility and enabling base-level SVG-driven 
+displays before introducing interactivity or animations.

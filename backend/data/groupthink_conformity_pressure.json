@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "individual_judgment",
-      "state": "muted"
+      "activation": 0.0
     },
     {
       "name": "social_alignment",
-      "state": "maximized"
+      "activation": 0.0
     }
   ]
 }

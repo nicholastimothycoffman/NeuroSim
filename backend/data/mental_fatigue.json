@@ -16,11 +16,11 @@
   "ai_modules": [
     {
       "name": "attention_control",
-      "state": "degraded"
+      "activation": 0.0
     },
     {
       "name": "working_memory",
-      "state": "sluggish"
+      "activation": 0.0
     }
   ]
 }

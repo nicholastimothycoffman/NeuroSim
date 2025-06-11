@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "suggestibility",
-      "state": "increased"
+      "activation": 0.0
     },
     {
       "name": "self_agency",
-      "state": "modulated"
+      "activation": 0.0
     }
   ]
 }

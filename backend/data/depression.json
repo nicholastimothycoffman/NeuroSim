@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "motivation",
-      "state": "low"
+      "activation": 0.0
     },
     {
       "name": "reward_processing",
-      "state": "blunted"
+      "activation": 0.0
     }
   ]
 }

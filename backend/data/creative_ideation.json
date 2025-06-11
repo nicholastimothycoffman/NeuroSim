@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "associative_thinking",
-      "state": "active"
+      "activation": 0.9
     },
     {
       "name": "inhibition",
-      "state": "reduced"
+      "activation": 0.0
     }
   ]
 }

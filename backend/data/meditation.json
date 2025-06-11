@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "mind_wandering",
-      "state": "off"
+      "activation": 0.0
     },
     {
       "name": "awareness",
-      "state": "heightened"
+      "activation": 0.0
     }
   ]
 }

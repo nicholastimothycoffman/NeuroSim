@@ -1,11 +1,22 @@
 {
-	"regions": [
-		{"name": "amygdala", "activation": 0.9},
-		{"name": "prefrontal_cortex", "activation": 0.3}
-	],
-	"ai_modules": [
-		{"name": "threat_analysis", "state": "active"},
-		{"name": "memory", "state": "suppressed"}
-	]
+  "regions": [
+    {
+      "name": "amygdala",
+      "activation": 0.9
+    },
+    {
+      "name": "prefrontal_cortex",
+      "activation": 0.3
+    }
+  ],
+  "ai_modules": [
+    {
+      "name": "threat_analysis",
+      "activation": 0.9
+    },
+    {
+      "name": "memory",
+      "activation": 0.2
+    }
+  ]
 }
-

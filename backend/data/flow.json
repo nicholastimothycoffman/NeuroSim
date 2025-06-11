@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "focus",
-      "state": "locked"
+      "activation": 0.0
     },
     {
       "name": "self_awareness",
-      "state": "reduced"
+      "activation": 0.0
     }
   ]
 }

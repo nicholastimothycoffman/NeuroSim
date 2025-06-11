@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "energy_spike",
-      "state": "followed_by_crash"
+      "activation": 0.0
     },
     {
       "name": "mood_stability",
-      "state": "fragile"
+      "activation": 0.0
     }
   ]
 }

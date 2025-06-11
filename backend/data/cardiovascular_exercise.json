@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "endorphin_release",
-      "state": "active"
+      "activation": 0.9
     },
     {
       "name": "stress",
-      "state": "reduced"
+      "activation": 0.0
     }
   ]
 }

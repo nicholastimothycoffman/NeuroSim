@@ -11,7 +11,11 @@ const App = () => {
 	useEffect(() => {
 		fetch(`http://localhost:8000/api/state/${selectedState}`)
 			.then((res) => res.json())
-			.then((data) => setStateData(data))
+			.then((data) => {
+				console.log('Received state data:', data)
+				setStateData(data)
+			})
+			.catch((err) => console.error('Failed to fetch state data:', err))
 	}, [selectedState])
 
 	return (
@@ -19,11 +23,21 @@ const App = () => {
 			<h1 className="text-3xl font-bold mb-4">NeuroSim</h1>
 			<StateSelector selectedState={selectedState} onChange={setSelectedState} />
 			<div className="grid grid-cols-2 gap-6 mt-6">
-				<BrainDiagram data={stateData} />
-				<AISystemDiagram data={stateData} />
+				{stateData ? (
+					<>
+						<BrainDiagram data={stateData} />
+						<AISystemDiagram data={stateData} />
+					</>
+				) : (
+					<div className="col-span-2">
+						<p>Loading brain diagrams...</p>
+						<p>Loading AI visualizations...</p>
+					</div>
+				)}
 			</div>
 		</div>
 	)
+
 }
 
 export default App

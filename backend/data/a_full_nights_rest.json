@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "memory_consolidation",
-      "state": "restored"
+      "activation": 0.0
     },
     {
       "name": "fatigue",
-      "state": "reset"
+      "activation": 0.0
     }
   ]
 }

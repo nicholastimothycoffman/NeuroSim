@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "alertness",
-      "state": "heightened"
+      "activation": 0.0
     },
     {
       "name": "energy_availability",
-      "state": "low"
+      "activation": 0.0
     }
   ]
 }

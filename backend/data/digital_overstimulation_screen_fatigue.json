@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "dopamine_cycle",
-      "state": "blunted"
+      "activation": 0.0
     },
     {
       "name": "attention_span",
-      "state": "fragmented"
+      "activation": 0.0
     }
   ]
 }

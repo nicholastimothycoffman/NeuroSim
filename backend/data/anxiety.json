@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "threat_vigilance",
-      "state": "hyperactive"
+      "activation": 0.0
     },
     {
       "name": "rational_filter",
-      "state": "weak"
+      "activation": 0.0
     }
   ]
 }

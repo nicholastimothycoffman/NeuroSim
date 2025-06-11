@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "working_memory",
-      "state": "overloaded"
+      "activation": 0.0
     },
     {
       "name": "decision_making",
-      "state": "sluggish"
+      "activation": 0.0
     }
   ]
 }

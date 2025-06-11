@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "neural_efficiency",
-      "state": "reduced"
+      "activation": 0.0
     },
     {
       "name": "fog",
-      "state": "present"
+      "activation": 0.0
     }
   ]
 }

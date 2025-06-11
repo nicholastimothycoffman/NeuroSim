@@ -16,11 +16,11 @@
   "ai_modules": [
     {
       "name": "cognitive_stability",
-      "state": "unstable"
+      "activation": 0.0
     },
     {
       "name": "memory_consolidation",
-      "state": "inactive"
+      "activation": 0.0
     }
   ]
 }

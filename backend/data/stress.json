@@ -16,11 +16,11 @@
   "ai_modules": [
     {
       "name": "threat_analysis",
-      "state": "active"
+      "activation": 0.9
     },
     {
       "name": "planning",
-      "state": "suppressed"
+      "activation": 0.2
     }
   ]
 }

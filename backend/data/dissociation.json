@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "self_identification",
-      "state": "disrupted"
+      "activation": 0.0
     },
     {
       "name": "emotional_processing",
-      "state": "numbed"
+      "activation": 0.0
     }
   ]
 }

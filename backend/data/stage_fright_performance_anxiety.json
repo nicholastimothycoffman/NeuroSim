@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "self_monitoring",
-      "state": "elevated"
+      "activation": 0.0
     },
     {
       "name": "speech_motor",
-      "state": "unstable"
+      "activation": 0.0
     }
   ]
 }

@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "movement_precision",
-      "state": "low"
+      "activation": 0.0
     },
     {
       "name": "stamina",
-      "state": "depleted"
+      "activation": 0.0
     }
   ]
 }

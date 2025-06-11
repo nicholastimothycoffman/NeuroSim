@@ -12,11 +12,11 @@
   "ai_modules": [
     {
       "name": "alertness",
-      "state": "boosted"
+      "activation": 0.0
     },
     {
       "name": "fatigue_signals",
-      "state": "suppressed"
+      "activation": 0.2
     }
   ]
 }
