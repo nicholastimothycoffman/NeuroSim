@@ -1,22 +1,13 @@
 {
   "regions": [
-    {
-      "name": "anterior_cingulate",
-      "activation": 0.8
-    },
-    {
-      "name": "amygdala",
-      "activation": 0.7
-    }
+    { "name": "anterior_cingulate", "activation": 0.8 },
+    { "name": "amygdala", "activation": 0.7 }
   ],
+  "ai_analog": "Reinforcement learning in high-failure environments",
   "ai_modules": [
-    {
-      "name": "conflict_monitoring",
-      "activation": 0.0
-    },
-    {
-      "name": "impulse_control",
-      "activation": 0.0
-    }
+    { "name": "trial_error_loop", "activation": 0.8 },
+    { "name": "reward_evaluation", "activation": 0.5 },
+    { "name": "persistence_drive", "activation": 0.7 },
+    { "name": "conflict_resolution", "activation": 0.6 }
   ]
 }

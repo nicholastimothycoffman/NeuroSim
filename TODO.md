@@ -20,10 +20,12 @@
 - [x] Migrated all `.json` files to use `activation` instead of `state` for `ai_modules`
 - [x] Implemented `backend/utils/convert_states_format.py` to automate format migration
 - [x] Updated `AISystemDiagram/index.jsx` to support `activation`-based rendering and route data to subcomponents
+- [x] Identified 15 cognitive states with strong AI analogs and archived remaining states
+- [x] Defined `ai_analog` and standardized `ai_modules` for all 15 core brain states
 
 ## 🔧 In Progress
 - [ ] Ensure region name strings from JSON align with frontend `regionPositions` mapping
-- [ ] Confirm final structure and completeness of each updated `.json` file
+- [ ] Confirm final structure and completeness of all revised `.json` files
 - [ ] Replace placeholder SVGs with meaningful, data-driven render logic (AI + brain)
 - [ ] Define interactivity design pattern (e.g. hover → tooltip, click → detail view)
 
@@ -41,5 +43,5 @@
 ---
 
 **Current Status**:  
-Frontend and backend are synchronized and stable. Cognitive state data is now standardized and loading correctly. Initial diagram rendering logic is in place. Focus is shifting to validating visual behavior from live data, implementing actual render logic in AI and brain diagram subcomponents, and preparing for interactivity and animation.
+Frontend and backend are synchronized and stable. A curated set of 15 cognitive states with strong AI analogs has been standardized. Each includes a descriptive `ai_analog` field and aligned `ai_modules` for meaningful rendering. Focus now shifts to completing visual and interactive components to express these mappings intuitively.
 

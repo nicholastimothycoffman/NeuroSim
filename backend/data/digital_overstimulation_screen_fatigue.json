@@ -1,22 +1,13 @@
 {
   "regions": [
-    {
-      "name": "visual_cortex",
-      "activation": 0.9
-    },
-    {
-      "name": "prefrontal_cortex",
-      "activation": 0.3
-    }
+    { "name": "visual_cortex", "activation": 0.9 },
+    { "name": "prefrontal_cortex", "activation": 0.3 }
   ],
+  "ai_analog": "Multimodal sensory I/O overload / GPU bottlenecks",
   "ai_modules": [
-    {
-      "name": "dopamine_cycle",
-      "activation": 0.0
-    },
-    {
-      "name": "attention_span",
-      "activation": 0.0
-    }
+    { "name": "visual_input", "activation": 1.0 },
+    { "name": "context_switching", "activation": 0.9 },
+    { "name": "processing_heat", "activation": 0.8 },
+    { "name": "cognitive_saturation", "activation": 0.85 }
   ]
 }

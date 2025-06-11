@@ -1,22 +1,13 @@
 {
   "regions": [
-    {
-      "name": "motor_cortex",
-      "activation": 0.7
-    },
-    {
-      "name": "hypothalamus",
-      "activation": 0.6
-    }
+    { "name": "motor_cortex", "activation": 0.7 },
+    { "name": "hypothalamus", "activation": 0.6 }
   ],
+  "ai_analog": "Increased system throughput via enhanced efficiency",
   "ai_modules": [
-    {
-      "name": "endorphin_release",
-      "activation": 0.9
-    },
-    {
-      "name": "stress",
-      "activation": 0.0
-    }
+    { "name": "energy_allocation", "activation": 0.8 },
+    { "name": "system_efficiency", "activation": 0.9 },
+    { "name": "cooling_control", "activation": 0.7 },
+    { "name": "output_latency", "activation": 0.3 }
   ]
 }

@@ -1,22 +1,13 @@
 {
   "regions": [
-    {
-      "name": "default_mode_network",
-      "activation": 0.75
-    },
-    {
-      "name": "temporal_lobe",
-      "activation": 0.85
-    }
+    { "name": "default_mode_network", "activation": 0.75 },
+    { "name": "temporal_lobe", "activation": 0.85 }
   ],
+  "ai_analog": "Generative model divergence / exploratory learning",
   "ai_modules": [
-    {
-      "name": "associative_thinking",
-      "activation": 0.9
-    },
-    {
-      "name": "inhibition",
-      "activation": 0.0
-    }
+    { "name": "pattern_generation", "activation": 0.9 },
+    { "name": "novelty_bias", "activation": 0.8 },
+    { "name": "semantic_network_expansion", "activation": 0.7 },
+    { "name": "rule_relaxation", "activation": 0.6 }
   ]
 }
