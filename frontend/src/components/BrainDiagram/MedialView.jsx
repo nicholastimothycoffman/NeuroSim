@@ -1,4 +1,5 @@
 import React from 'react'
+import { normalizeName } from '../../utils/dataUtils'
 
 const regionPositions = {
 	prefrontal_cortex: { x: 80, y: 60 },
@@ -18,6 +19,8 @@ const getFillColor = (activation) => {
 }
 
 const MedialView = ({ regions }) => {
+	console.log('Incoming regions:', regions)
+
 	return (
 		<svg viewBox="0 0 300 200" className="w-full h-auto">
 			{/* Placeholder brain silhouette */}
@@ -30,8 +33,13 @@ const MedialView = ({ regions }) => {
 
 			{/* Dynamic region nodes */}
 			{regions.map((region) => {
-				const pos = regionPositions[region.name]
-				if (!pos) return null
+				const key = normalizeName(region.name)
+				const pos = regionPositions[key]
+
+				if (!pos) {
+					console.warn(`Unmapped medial brain region: "${region.name}" (normalized: "${key}")`)
+					return null
+				}
 
 				return (
 					<circle

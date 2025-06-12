@@ -3,7 +3,10 @@ import LateralView from './LateralView'
 import MedialView from './MedialView'
 
 const BrainDiagram = ({ data }) => {
-	if (!data || !data.regions) {
+	console.log('🧠 BrainDiagram received data:', data)
+
+	if (!data || !Array.isArray(data.regions) || data.regions.length === 0) {
+		console.warn('⚠️ BrainDiagram: No valid brain regions found:', data?.regions)
 		return <div>Loading brain diagrams...</div>
 	}
 

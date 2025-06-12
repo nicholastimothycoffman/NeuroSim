@@ -9,6 +9,7 @@ const App = () => {
 	const [selectedState, setSelectedState] = useState('stress')
 
 	useEffect(() => {
+		console.log('Fetching cognitive state:', selectedState)
 		fetch(`http://localhost:8000/api/state/${selectedState}`)
 			.then((res) => res.json())
 			.then((data) => {
@@ -37,7 +38,6 @@ const App = () => {
 			</div>
 		</div>
 	)
-
 }
 
 export default App

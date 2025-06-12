@@ -23,6 +23,12 @@
 - [x] Identified 15 cognitive states with strong AI analogs and archived remaining states
 - [x] Defined `ai_analog` and standardized `ai_modules` for all 15 core brain states
 
+## 🔁 Immediate Focus
+- [ ] Finalize data-driven rendering in `LateralView.jsx` and `MedialView.jsx`
+- [ ] Implement dynamic AI module rendering in `NodeLink.jsx`
+- [ ] Normalize region/module names for robust matching
+- [ ] Visually test and confirm correctness across all 15 core states
+
 ## 🔧 In Progress
 - [ ] Ensure region name strings from JSON align with frontend `regionPositions` mapping
 - [ ] Confirm final structure and completeness of all revised `.json` files
