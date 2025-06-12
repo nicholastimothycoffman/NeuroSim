@@ -1,53 +1,48 @@
 # NeuroSim TODO
 
-## ✅ Completed
-- [x] Verified that backend `/api/state/{state_name}` is functioning correctly
-- [x] Confirmed frontend `App.jsx` fetches state data and passes it to diagram components
-- [x] Established and documented the expected JSON format (`regions` + `ai_modules`)
-- [x] Created 29 example cognitive state `.json` files using a utility script
-- [x] Implemented `generate_cognitive_states.py` to automate state data creation
-- [x] Fixed logic in `<BrainDiagram>` and `<AISystemDiagram>` components to correctly render incoming data
-- [x] Added graceful handling for loading states or invalid state data (e.g. fallback text)
-- [x] Integrated `StateSelector` dropdown with the full list of cognitive states
-- [x] Defined long-term visual layout plan (brain: lateral/medial; AI: 5-fold representation)
-- [x] Scaffolded `BrainDiagram/` subcomponents: `LateralView`, `MedialView`, and wrapper
-- [x] Scaffolded `AISystemDiagram/` with five placeholder components for alternate visual representations
-- [x] Repaired and verified correct frontend file layout (`index.html`, `main.jsx`)
-- [x] Confirmed frontend renders selector and loading UI in default state
-- [x] Updated `App.jsx` to conditionally render brain and AI components only when data is loaded
-- [x] Confirmed `LateralView.jsx` and `MedialView.jsx` mount without errors
-- [x] Began debugging live data rendering paths using console logging
-- [x] Migrated all `.json` files to use `activation` instead of `state` for `ai_modules`
-- [x] Implemented `backend/utils/convert_states_format.py` to automate format migration
-- [x] Updated `AISystemDiagram/index.jsx` to support `activation`-based rendering and route data to subcomponents
-- [x] Identified 15 cognitive states with strong AI analogs and archived remaining states
-- [x] Defined `ai_analog` and standardized `ai_modules` for all 15 core brain states
+## Completed
+- Verified backend `/api/state/{state_name}` functions correctly using FastAPI
+- Implemented file path handling with `pathlib` for robust JSON loading
+- Confirmed frontend `App.jsx` fetches cognitive state data and routes to components
+- Standardized `.json` schema with `regions`, `ai_modules`, and `ai_analog`
+- Migrated all `.json` files using `convert_states_format.py`
+- Identified and curated 15 core brain states with strong AI analogs
+- Designed and documented long-term visual layout (lateral/medial brain + 5 AI views)
+- Implemented conditional rendering of `BrainDiagram` and `AISystemDiagram`
+- Created `LateralView.jsx` and `MedialView.jsx` with functional SVG rendering
+- Visualized brain region activation using color-coded circles
+- Verified end-to-end data flow from backend to dynamic SVG visuals
+- Added logging in `App.jsx`, `BrainDiagram.jsx`, and region views for live debugging
+- Implemented all 5 dynamic AI diagram components:
+  - `NodeLink.jsx`
+  - `CortexSheet.jsx`
+  - `HeatmapSilhouette.jsx`
+  - `RadialConnectome.jsx`
+  - `LayeredNetwork.jsx`
 
-## 🔁 Immediate Focus
-- [ ] Finalize data-driven rendering in `LateralView.jsx` and `MedialView.jsx`
-- [ ] Implement dynamic AI module rendering in `NodeLink.jsx`
-- [ ] Normalize region/module names for robust matching
-- [ ] Visually test and confirm correctness across all 15 core states
+## Immediate Focus
+- Refine layout, spacing, and labels for all 5 AI diagrams
+- Validate all diagrams across all 15 cognitive states
+- Normalize edge-case module names using `normalizeName()`
+- Add fallback/error rendering for missing or malformed modules
+- Enhance tooltip information for AI modules (e.g. name + activation + analog note)
 
-## 🔧 In Progress
-- [ ] Ensure region name strings from JSON align with frontend `regionPositions` mapping
-- [ ] Confirm final structure and completeness of all revised `.json` files
-- [ ] Replace placeholder SVGs with meaningful, data-driven render logic (AI + brain)
-- [ ] Define interactivity design pattern (e.g. hover → tooltip, click → detail view)
+## In Progress
+- Ensure `region.name` fields align with frontend `regionPositions` mappings
+- Centralize `getFillColor()` and `normalizeName()` into shared utility module
+- Prepare fallback rendering for unknown brain regions or AI modules
+- Define consistent interactive behavior (hover tooltips, optional click handling)
 
-## 🔜 Next Steps
-- [ ] Implement dynamic region rendering in `LateralView.jsx` (visual anatomy + activation)
-- [ ] Implement dynamic region rendering in `MedialView.jsx`
-- [ ] Implement visual logic for at least one `AISystemDiagram/` subcomponent (e.g. `NodeLink.jsx`)
-- [ ] Validate `.json` input parsing and region matching across all states
-- [ ] Animate transitions between cognitive states (e.g. fading, color morph, motion)
-- [ ] Add metadata descriptions to each cognitive state (for UI tooltips or detail panels)
-- [ ] Optionally expose `/api/states` endpoint to dynamically list cognitive states
-- [ ] Add responsive layout wrapper for brain vs. AI system side-by-side presentation
-- [ ] Centralize color logic (e.g. `getFillColor()`) into a shared utility module
+## Next Steps
+- Animate transitions between cognitive states (fade, color morph, motion)
+- Add metadata UI support (tooltips, overlays, expandable AI module notes)
+- Optionally expose `/api/states` endpoint to dynamically list available states
+- Add responsive layout wrapper for side-by-side brain and AI visualizations
+- Implement testing suite (unit + integration) for data pipeline and component rendering
+- Document rendering behavior, module structure, and component inputs in `docs/frontend.md`
 
 ---
 
-**Current Status**:  
-Frontend and backend are synchronized and stable. A curated set of 15 cognitive states with strong AI analogs has been standardized. Each includes a descriptive `ai_analog` field and aligned `ai_modules` for meaningful rendering. Focus now shifts to completing visual and interactive components to express these mappings intuitively.
+**Current Status**  
+Both brain and AI diagrams are now dynamically rendered based on JSON input. Five AI module visualizations are operational. Focus now shifts to polishing visuals, testing across all states, and preparing for animation and metadata overlays.
 
