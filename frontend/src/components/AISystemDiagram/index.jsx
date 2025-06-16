@@ -11,18 +11,22 @@ const AISystemDiagram = ({ data }) => {
 	}
 
 	return (
-		<div className="bg-zinc-800 p-4 rounded-xl">
-			<h2 className="text-xl font-bold mb-4">AI System Activity</h2>
-			<h3 className="text-lg font-semibold mb-2">Node-Link View</h3>
-			<NodeLink modules={data.ai_modules} />
-			<h3 className="text-lg font-semibold mt-6 mb-2">Cortex Sheet View</h3>
-			<CortexSheet modules={data.ai_modules} />
-			<h3 className="text-lg font-semibold mt-6 mb-2">Heatmap Silhouette View</h3>
-			<HeatmapSilhouette modules={data.ai_modules} />
-			<h3 className="text-lg font-semibold mt-6 mb-2">Radial Connectome View</h3>
-			<RadialConnectome modules={data.ai_modules} />
-			<h3 className="text-lg font-semibold mt-6 mb-2">Layered Network View</h3>
-			<LayeredNetwork modules={data.ai_modules} />
+		<div className="w-full h-full flex flex-col justify-between space-y-2">
+			<div className="w-full h-1/5 max-h-[19%] min-h-[80px]">
+				<NodeLink data={data} />
+			</div>
+			<div className="w-full h-1/5 max-h-[19%] min-h-[80px]">
+				<CortexSheet data={data} />
+			</div>
+			<div className="w-full h-1/5 max-h-[19%] min-h-[80px]">
+				<HeatmapSilhouette data={data} />
+			</div>
+			<div className="w-full h-1/5 max-h-[19%] min-h-[80px]">
+				<RadialConnectome data={data} />
+			</div>
+			<div className="w-full h-1/5 max-h-[19%] min-h-[80px]">
+				<LayeredNetwork data={data} />
+			</div>
 		</div>
 	)
 }

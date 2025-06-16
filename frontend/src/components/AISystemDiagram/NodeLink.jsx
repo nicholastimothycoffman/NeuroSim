@@ -7,8 +7,10 @@ const getFillColor = (activation) => {
 	return '#3b82f6'                        // blue-500
 }
 
-const NodeLink = ({ modules }) => {
-	if (!modules || modules.length === 0) {
+const NodeLink = ({ data }) => {
+	const modules = data?.ai_modules || []
+
+	if (!modules.length) {
 		return <p>No AI module data available.</p>
 	}
 

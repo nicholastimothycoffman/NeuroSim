@@ -7,8 +7,10 @@ const getFillColor = (activation) => {
 	return '#3b82f6'                        // blue
 }
 
-const CortexSheet = ({ modules }) => {
-	if (!modules || modules.length === 0) {
+const CortexSheet = ({ data }) => {
+	const modules = data?.ai_modules || []
+
+	if (!modules.length) {
 		return <p>No AI module data available.</p>
 	}
 

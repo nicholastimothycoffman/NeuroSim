@@ -9,19 +9,17 @@ const BrainDiagram = ({ data }) => {
 		console.warn('⚠️ BrainDiagram: No valid brain regions found:', data?.regions)
 		return <div>Loading brain diagrams...</div>
 	}
-
+	
 	return (
-		<div className="bg-zinc-800 p-4 rounded-xl">
-			<h2 className="text-xl font-bold mb-4">Human Brain Activity</h2>
-			<div className="grid grid-cols-2 gap-6">
-				<div>
-					<h3 className="text-lg font-semibold mb-2">Lateral View</h3>
-					<LateralView regions={data.regions} />
-				</div>
-				<div>
-					<h3 className="text-lg font-semibold mb-2">Medial View</h3>
-					<MedialView regions={data.regions} />
-				</div>
+		<div className="w-full h-full flex flex-col justify-between items-center space-y-2">
+			{/* Lateral View */}
+			<div className="w-full h-1/2 max-h-[49%]">
+				<LateralView regions={data.regions} />
+			</div>
+
+			{/* Medial View */}
+			<div className="w-full h-1/2 max-h-[49%]">
+				<MedialView regions={data.regions} />
 			</div>
 		</div>
 	)

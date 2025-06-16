@@ -7,8 +7,10 @@ const getFillColor = (activation) => {
 	return '#3b82f6'                        // blue
 }
 
-const LayeredNetwork = ({ modules }) => {
-	if (!modules || modules.length === 0) {
+const LayeredNetwork = ({ data }) => {
+	const modules = data?.ai_modules || []
+
+	if (!modules.length) {
 		return <p>No AI module data available.</p>
 	}
 

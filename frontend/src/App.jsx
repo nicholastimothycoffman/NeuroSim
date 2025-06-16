@@ -20,24 +20,36 @@ const App = () => {
 	}, [selectedState])
 
 	return (
-		<div className="p-4 font-sans text-white bg-zinc-900 min-h-screen">
-			<h1 className="text-3xl font-bold mb-4">NeuroSim</h1>
-			<StateSelector selectedState={selectedState} onChange={setSelectedState} />
-			<div className="grid grid-cols-2 gap-6 mt-6">
-				{stateData ? (
-					<>
+		<div className="h-screen w-screen bg-zinc-900 text-white font-sans overflow-hidden">
+			{/* Optional header and selector */}
+			<div className="p-2 flex justify-between items-center bg-zinc-800 border-b border-zinc-700">
+				<h1 className="text-xl font-bold">NeuroSim</h1>
+				<StateSelector selectedState={selectedState} onChange={setSelectedState} />
+			</div>
+
+			{/* Main diagram area */}
+			<div className="flex h-[calc(100%-48px)] w-full overflow-hidden">
+				{/* Left: Brain Diagrams */}
+				<div className="w-1/2 p-2 flex flex-col justify-between items-center space-y-2">
+					{stateData ? (
 						<BrainDiagram data={stateData} />
-						<AISystemDiagram data={stateData} />
-					</>
-				) : (
-					<div className="col-span-2">
+					) : (
 						<p>Loading brain diagrams...</p>
+					)}
+				</div>
+
+				{/* Right: AI Diagrams */}
+				<div className="w-1/2 p-2 flex flex-col justify-between items-center space-y-2 overflow-hidden">
+					{stateData ? (
+						<AISystemDiagram data={stateData} />
+					) : (
 						<p>Loading AI visualizations...</p>
-					</div>
-				)}
+					)}
+				</div>
 			</div>
 		</div>
 	)
+
 }
 
 export default App
