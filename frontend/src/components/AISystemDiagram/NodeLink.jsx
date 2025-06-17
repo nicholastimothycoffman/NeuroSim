@@ -20,7 +20,11 @@ const NodeLink = ({ data }) => {
 	const spacing = svgWidth / (modules.length + 1)
 
 	return (
-		<svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full h-auto">
+		<svg
+			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+			className="w-full h-full max-w-full max-h-full border border-pink-500"
+			preserveAspectRatio="xMidYMid meet"
+		>
 			{modules.map((mod, idx) => {
 				const x = spacing * (idx + 1)
 				const y = svgHeight / 2

@@ -21,19 +21,21 @@
   - `LayeredNetwork.jsx`  
 - Confirmed `BrainDiagram` is cleanly separated from AI visuals  
 - Verified AI diagrams render activation-based visuals using `data.ai_modules`  
+- Added Tailwind CSS integration via `tailwind.config.cjs`, `postcss.config.cjs`, and `index.css`  
+- Replaced `w-1/2` with `flex-1` and verified `flex`-based layout intention  
+- Verified Tailwind is active using `text-pink-600` / `bg-yellow-300` diagnostic elements  
 
 ---
 
 ## Immediate Focus
-- Diagnose and resolve layout bug causing all diagrams to appear on the left side  
-- Redesign layout to split browser view 50/50 between brain and AI diagrams  
-- Confirm Tailwind `w-1/2`, `flex`, and `overflow-hidden` behavior works as expected  
-- Add temporary background colors to diagnose flexbox column boundaries  
-- Validate all 7 diagrams are rendering in their respective halves (left: brain, right: AI)  
-- Scale each of the 5 AI diagrams to 1/5 of right half; both brain views to 1/2 of left half  
-- Refine layout, spacing, and labels for all 5 AI diagrams  
-- Use Tailwind or scoped CSS to constrain SVG rendering within height bounds  
-- Enhance tooltip information for AI modules (e.g. name + activation + analog note)  
+- Resolve persistent layout bug: all diagrams still render in full-width left side  
+- Debug and confirm whether the `#root` container or outer flex context is being overridden  
+- Confirm that `App.jsx` top-level container is not constrained by external layout rules  
+- Temporarily isolate `BrainDiagram` and `AISystemDiagram` for unit rendering testing  
+- Add hard borders (e.g. `border-4 border-blue-500`) to confirm layout divisions  
+- Use SVG `preserveAspectRatio` and constrained `w-full h-full` in inner diagrams  
+- Continue enforcing height containment via `h-full max-h-[XX%]` on child components  
+- Confirm that no component returns an unwrapped `svg` element without sizing  
 
 ---
 
@@ -57,5 +59,5 @@
 ---
 
 **Current Status**  
-All seven diagrams (2 brain, 5 AI) are rendering based on JSON input. Component isolation, data flow, and activation-based visuals are functioning. Focus now is on finalizing the 50/50 layout split and resolving a misalignment issue causing all diagrams to render on the left side.
+All diagrams (2 brain, 5 AI) successfully render from JSON input. Tailwind is confirmed functional. However, a layout bug persists where all content displays as full-width in a single column. Active focus is on forcing horizontal layout containment using `flex`, `h-full`, and diagnostic wrapper borders.
 

@@ -11,7 +11,7 @@ const BrainDiagram = ({ data }) => {
 	}
 	
 	return (
-		<div className="w-full h-full flex flex-col justify-between items-center space-y-2">
+		<div className="w-full h-full flex flex-col justify-between items-center space-y-2 overflow-hidden">
 			{/* Lateral View */}
 			<div className="w-full h-1/2 max-h-[49%]">
 				<LateralView regions={data.regions} />
