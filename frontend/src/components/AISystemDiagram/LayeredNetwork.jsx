@@ -71,8 +71,14 @@ const LayeredNetwork = ({ data }) => {
 				const { x, y } = positions[mod.name]
 				return (
 					<g key={mod.name}>
-						<circle cx={x} cy={y} r={nodeRadius} fill={getFillColor(mod.activation)}>
-							<title>{`${mod.name}: ${mod.activation}`}</title>
+						<circle
+							cx={x}
+							cy={y}
+							r={nodeRadius}
+							fill={getFillColor(mod.activation)}
+							style={{ transition: 'fill 0.3s ease-in-out' }}
+						>
+							<title>{`${mod.name.replace(/_/g, ' ')}: ${mod.activation}`}</title>
 						</circle>
 						<text
 							x={x}

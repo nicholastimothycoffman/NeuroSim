@@ -50,8 +50,9 @@ const RadialConnectome = ({ data }) => {
 							cy={y}
 							r="10"
 							fill={color}
+							style={{ transition: 'fill 0.3s ease-in-out' }}
 						>
-							<title>{`${mod.name}: ${mod.activation}`}</title>
+							<title>{`${mod.name.replace(/_/g, ' ')}: ${mod.activation}`}</title>
 						</circle>
 						{/* Label */}
 						<text

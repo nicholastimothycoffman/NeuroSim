@@ -25,6 +25,26 @@ const NodeLink = ({ data }) => {
 			className="w-full h-full max-w-full max-h-full border border-pink-500"
 			preserveAspectRatio="xMidYMid meet"
 		>
+			{/* Connecting lines */}
+			{modules.map((_, idx) => {
+				if (idx === 0) return null
+				const prevX = spacing * idx
+				const x = spacing * (idx + 1)
+				const y = svgHeight / 2
+				return (
+					<line
+						key={`line-${idx}`}
+						x1={prevX}
+						y1={y}
+						x2={x}
+						y2={y}
+						stroke="#9ca3af"
+						strokeWidth="1"
+					/>
+				)
+			})}
+
+			{/* Nodes */}
 			{modules.map((mod, idx) => {
 				const x = spacing * (idx + 1)
 				const y = svgHeight / 2
@@ -38,7 +58,10 @@ const NodeLink = ({ data }) => {
 							fill={getFillColor(mod.activation)}
 							stroke="#ffffff"
 							strokeWidth="1"
-						/>
+							style={{ transition: 'fill 0.3s ease-in-out' }}
+						>
+							<title>{mod.name.replace(/_/g, ' ')}</title>
+						</circle>
 						<text
 							x={x}
 							y={y + radius + 15}

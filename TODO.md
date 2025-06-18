@@ -14,33 +14,30 @@
 * Visualized brain region activation using color-coded circles
 * Verified end-to-end data flow from backend to dynamic SVG visuals
 * Added logging in `App.jsx`, `BrainDiagram.jsx`, and region views for live debugging
-* Implemented all 5 dynamic AI diagram components with correct prop handling:
+* Implemented all 5 dynamic AI diagram components with correct prop handling and visual enhancements:
 
-  * `NodeLink.jsx`
-  * `CortexSheet.jsx`
-  * `HeatmapSilhouette.jsx`
-  * `RadialConnectome.jsx`
-  * `LayeredNetwork.jsx`
+  * `NodeLink.jsx`: Added node connections, hover tooltips, animated fill transitions
+  * `CortexSheet.jsx`: Added hover tooltips and animated fill transitions
+  * `HeatmapSilhouette.jsx`: Added hover tooltips and animated fill transitions
+  * `RadialConnectome.jsx`: Added hover tooltips and animated fill transitions
+  * `LayeredNetwork.jsx`: Added hover tooltips and animated fill transitions
 * Confirmed `BrainDiagram` is cleanly separated from AI visuals
 * Verified AI diagrams render activation-based visuals using `data.ai_modules`
 * Added Tailwind CSS integration via `tailwind.config.cjs`, `postcss.config.cjs`, and `index.css`
 * Replaced `w-1/2` with `flex-1` and verified `flex`-based layout intention
 * Verified Tailwind is active using `text-pink-600` / `bg-yellow-300` diagnostic elements
 * Confirmed Tailwind working after postcss regression by purging plugins, reinstalling, and testing baseline flexbox layout with red/green split
+* Reintroduced real components (`BrainDiagram`, `AISystemDiagram`) into split layout
+* Enforced SVG height containment using `h-1/5`, `max-h-[20%]`, `min-h-[80px]`, and `object-contain`
 
----
 
 ## Immediate Focus
 
-* Restore real components (BrainDiagram + AISystemDiagram) into confirmed split layout
-* Begin enforcing diagram height containment using `h-1/2` or `h-1/5` + `max-h-[XX%]`
 * Validate each diagram honors its own wrapper bounds within `AISystemDiagram`
-* Confirm only one component is rendered at a time during debugging
-* Check each child component uses `className="w-full h-full"` (or proportioned height) within its container
-* Use Tailwind tools like `aspect-[2/1]` or `object-contain` to maintain SVG scaling
-* Remove placeholder debug content only after layout integrity is confirmed
+* Confirm only one component is rendered at a time during debugging (if needed)
+* Continue enforcing consistent use of `className="w-full h-full"` or proportional height in child components
+* Remove placeholder debug content only after full layout integrity and component rendering confirmed
 
----
 
 ## In Progress
 
@@ -50,7 +47,6 @@
 * Define consistent interactive behavior (hover tooltips, optional click handling)
 * Implement temporary outlines or debug visuals to confirm diagram boundaries
 
----
 
 ## Next Steps
 
@@ -61,8 +57,8 @@
 * Implement testing suite (unit + integration) for data pipeline and component rendering
 * Document rendering behavior, module structure, and component inputs in `docs/frontend.md`
 
----
 
 **Current Status**
-Split layout using `flex` and `flex-1` is confirmed functioning. Tailwind styles render properly and the two-halves structure now displays as expected. Next step is to progressively reintroduce real components inside the working layout and enforce visual constraints on their SVG content.
+Split layout with `flex` and `flex-1` now renders all cognitive visualizations and dynamic AI diagrams. Component-specific enhancements (like animation and interactivity) are complete. Next focus is on refining inter-component behavior and cleaning up debug scaffolding.
+
 

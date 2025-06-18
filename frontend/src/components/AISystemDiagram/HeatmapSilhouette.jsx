@@ -48,7 +48,10 @@ const HeatmapSilhouette = ({ data }) => {
 							height={blockHeight - 4}
 							fill={color}
 							rx="4"
-						/>
+							style={{ transition: 'fill 0.3s ease-in-out' }}
+						>
+							<title>{mod.name.replace(/_/g, ' ')}</title>
+						</rect>
 						<text
 							x={width / 2}
 							y={y + blockHeight / 2}

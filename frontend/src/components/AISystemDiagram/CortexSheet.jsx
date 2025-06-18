@@ -47,7 +47,10 @@ const CortexSheet = ({ data }) => {
 							fill={getFillColor(mod.activation)}
 							stroke="#ffffff"
 							strokeWidth="1"
-						/>
+							style={{ transition: 'fill 0.3s ease-in-out' }}
+						>
+							<title>{mod.name.replace(/_/g, ' ')}</title>
+						</circle>
 						<text
 							x={x}
 							y={y + 18}
