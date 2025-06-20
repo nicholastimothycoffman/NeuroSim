@@ -14,11 +14,11 @@ const RadialConnectome = ({ data }) => {
 		return <p>No AI module data available.</p>
 	}
 
-	const svgWidth = 120
-	const svgHeight = 120
+	const svgWidth = 150
+	const svgHeight = 150
 	const cx = svgWidth / 2
 	const cy = svgHeight / 2
-	const radius = 35
+	const radius = 50
 	const angleStep = (2 * Math.PI) / modules.length
 
 	return (
@@ -62,7 +62,7 @@ const RadialConnectome = ({ data }) => {
 							x={x}
 							y={y - 6}
 							textAnchor="middle"
-							fontSize="2.5"
+							fontSize="5"
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ')}

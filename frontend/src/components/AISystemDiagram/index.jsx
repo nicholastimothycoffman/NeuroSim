@@ -11,20 +11,20 @@ const AISystemDiagram = ({ data }) => {
 	}
 
 	return (
-		<div className="w-full h-full flex flex-col">
-			<div className="w-full h-[120px] overflow-hidden flex items-center justify-center">
+		<div className="w-full h-full flex flex-col gap-y-2">
+			<div className="w-full h-full overflow-hidden flex items-center justify-center">
 				<NodeLink data={data} />
 			</div>
-			<div className="w-full h-[180px] overflow-hidden flex items-center justify-center">
+			<div className="w-full h-full overflow-hidden flex items-center justify-center">
 				<CortexSheet data={data} />
 			</div>
-			<div className="w-full h-[140px] overflow-hidden flex items-center justify-center">
+			<div className="w-full h-full overflow-hidden flex items-center justify-center">
 				<HeatmapSilhouette data={data} />
 			</div>
-			<div className="w-full h-[180px] overflow-hidden flex items-center justify-center">
+			<div className="w-full h-full overflow-hidden flex items-center justify-center">
 				<RadialConnectome data={data} />
 			</div>
-			<div className="w-full h-[160px] overflow-hidden flex items-center justify-center">
+			<div className="w-full h-full overflow-hidden flex items-center justify-center">
 				<LayeredNetwork data={data} />
 			</div>
 		</div>

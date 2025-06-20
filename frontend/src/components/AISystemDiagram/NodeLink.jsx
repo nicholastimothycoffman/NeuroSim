@@ -15,7 +15,7 @@ const NodeLink = ({ data }) => {
 	}
 
 	const radius = 5
-	const svgWidth = 100
+	const svgWidth = 200
 	const svgHeight = 50
 	const spacing = svgWidth / (modules.length + 1)
 
@@ -65,9 +65,9 @@ const NodeLink = ({ data }) => {
 						</circle>
 						<text
 							x={x}
-							y={y + radius + 5}
+							y={idx % 2 === 0 ? y - radius - 10 : y + radius + 12}
 							textAnchor="middle"
-							fontSize="3"
+							fontSize="5"
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ')}

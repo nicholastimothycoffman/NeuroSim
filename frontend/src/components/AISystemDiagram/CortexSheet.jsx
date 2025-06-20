@@ -15,7 +15,7 @@ const CortexSheet = ({ data }) => {
 	}
 
 	// Relative viewBox size
-	const svgWidth = 100
+	const svgWidth = 200
 	const svgHeight = 50
 	const waveAmplitude = 10
 	const spacing = svgWidth / (modules.length + 1)
