@@ -21,12 +21,13 @@ const LayeredNetwork = ({ data }) => {
 		layers[i % layerCount].push(mod)
 	})
 
-	const svgWidth = 300
-	const svgHeight = 300
+	const svgWidth = 140
+	const svgHeight = 120
 	const layerSpacing = svgWidth / (layerCount + 1)
-	const nodeRadius = 10
+	const nodeRadius = 4
 
-	// Helper to get node positions
+	// Compute positions
+	const positions = {}
 	const getNodePos = (layerIndex, nodeIndex, nodesInLayer) => {
 		const x = layerSpacing * (layerIndex + 1)
 		const spacing = svgHeight / (nodesInLayer + 1)
@@ -34,8 +35,6 @@ const LayeredNetwork = ({ data }) => {
 		return { x, y }
 	}
 
-	// Precompute node positions
-	const positions = {}
 	layers.forEach((layer, i) => {
 		layer.forEach((mod, j) => {
 			positions[mod.name] = getNodePos(i, j, layer.length)
@@ -43,8 +42,12 @@ const LayeredNetwork = ({ data }) => {
 	})
 
 	return (
-		<svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full h-auto">
-			{/* Draw edges between layers */}
+		<svg
+			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+			className="w-full h-full object-contain"
+			preserveAspectRatio="xMidYMid meet"
+		>
+			{/* Connections */}
 			{layers.slice(0, -1).map((layer, i) => {
 				const nextLayer = layers[i + 1]
 				return layer.flatMap((from) =>
@@ -59,14 +62,14 @@ const LayeredNetwork = ({ data }) => {
 								x2={toPos.x}
 								y2={toPos.y}
 								stroke="#6b7280"
-								strokeWidth="1"
+								strokeWidth="0.5"
 							/>
 						)
 					})
 				)
 			})}
 
-			{/* Draw nodes */}
+			{/* Nodes */}
 			{modules.map((mod) => {
 				const { x, y } = positions[mod.name]
 				return (
@@ -82,9 +85,9 @@ const LayeredNetwork = ({ data }) => {
 						</circle>
 						<text
 							x={x}
-							y={y + nodeRadius + 12}
+							y={y + nodeRadius + 6}
 							textAnchor="middle"
-							fontSize="10"
+							fontSize="3"
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ')}

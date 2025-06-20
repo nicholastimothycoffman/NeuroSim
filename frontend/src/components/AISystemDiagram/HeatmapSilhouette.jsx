@@ -14,24 +14,29 @@ const HeatmapSilhouette = ({ data }) => {
 		return <p>No AI module data available.</p>
 	}
 
-	const width = 200
-	const height = 300
-	const blockHeight = height / modules.length
-	const blockWidth = 60
-	const xOffset = (width - blockWidth) / 2
+	// Scalable dimensions
+	const svgWidth = 60
+	const svgHeight = 100
+	const blockHeight = svgHeight / modules.length
+	const blockWidth = 20
+	const xOffset = (svgWidth - blockWidth) / 2
 
 	return (
-		<svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto">
-			{/* Placeholder silhouette outline */}
+		<svg
+			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+			className="w-full h-full object-contain"
+			preserveAspectRatio="xMidYMid meet"
+		>
+			{/* Silhouette outline */}
 			<rect
-				x="70"
-				y="10"
-				width="60"
-				height="280"
-				rx="30"
+				x={(svgWidth - 20) / 2}
+				y="0"
+				width="20"
+				height={svgHeight}
+				rx="8"
 				fill="none"
 				stroke="#9ca3af"
-				strokeWidth="2"
+				strokeWidth="0.75"
 			/>
 
 			{/* Heatmap blocks */}
@@ -45,19 +50,19 @@ const HeatmapSilhouette = ({ data }) => {
 							x={xOffset}
 							y={y}
 							width={blockWidth}
-							height={blockHeight - 4}
+							height={blockHeight * 0.9}
 							fill={color}
-							rx="4"
+							rx="1.5"
 							style={{ transition: 'fill 0.3s ease-in-out' }}
 						>
 							<title>{mod.name.replace(/_/g, ' ')}</title>
 						</rect>
 						<text
-							x={width / 2}
+							x={svgWidth / 2}
 							y={y + blockHeight / 2}
 							textAnchor="middle"
 							alignmentBaseline="middle"
-							fontSize="10"
+							fontSize="2.5"
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ')}

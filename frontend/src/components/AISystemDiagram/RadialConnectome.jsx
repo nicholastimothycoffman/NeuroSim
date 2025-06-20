@@ -14,15 +14,21 @@ const RadialConnectome = ({ data }) => {
 		return <p>No AI module data available.</p>
 	}
 
-	const cx = 150
-	const cy = 150
-	const radius = 100
+	const svgWidth = 120
+	const svgHeight = 120
+	const cx = svgWidth / 2
+	const cy = svgHeight / 2
+	const radius = 35
 	const angleStep = (2 * Math.PI) / modules.length
 
 	return (
-		<svg viewBox="0 0 300 300" className="w-full h-auto">
+		<svg
+			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+			className="w-full h-full object-contain"
+			preserveAspectRatio="xMidYMid meet"
+		>
 			{/* Central node */}
-			<circle cx={cx} cy={cy} r="8" fill="#d1d5db">
+			<circle cx={cx} cy={cy} r="3" fill="#d1d5db">
 				<title>AI Core</title>
 			</circle>
 
@@ -35,31 +41,28 @@ const RadialConnectome = ({ data }) => {
 
 				return (
 					<g key={mod.name}>
-						{/* Connecting line */}
 						<line
 							x1={cx}
 							y1={cy}
 							x2={x}
 							y2={y}
 							stroke="#6b7280"
-							strokeWidth="1"
+							strokeWidth="0.5"
 						/>
-						{/* Module node */}
 						<circle
 							cx={x}
 							cy={y}
-							r="10"
+							r="4"
 							fill={color}
 							style={{ transition: 'fill 0.3s ease-in-out' }}
 						>
 							<title>{`${mod.name.replace(/_/g, ' ')}: ${mod.activation}`}</title>
 						</circle>
-						{/* Label */}
 						<text
 							x={x}
-							y={y - 14}
+							y={y - 6}
 							textAnchor="middle"
-							fontSize="10"
+							fontSize="2.5"
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ')}
