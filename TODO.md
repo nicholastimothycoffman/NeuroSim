@@ -15,12 +15,11 @@
 * Verified end-to-end data flow from backend to dynamic SVG visuals
 * Added logging in `App.jsx`, `BrainDiagram.jsx`, and region views for live debugging
 * Implemented all 5 dynamic AI diagram components with correct prop handling and visual enhancements:
-
   * `NodeLink.jsx`: Added node connections, hover tooltips, animated fill transitions
-  * `CortexSheet.jsx`: Added hover tooltips and animated fill transitions
-  * `HeatmapSilhouette.jsx`: Added hover tooltips and animated fill transitions
-  * `RadialConnectome.jsx`: Added hover tooltips and animated fill transitions
-  * `LayeredNetwork.jsx`: Added hover tooltips and animated fill transitions
+  * `CortexSheet.jsx`: Added hover tooltips, animated fill transitions, text staggering
+  * `HeatmapSilhouette.jsx`: Added hover tooltips, vertical label staggering (left/right)
+  * `RadialConnectome.jsx`: Added tooltips, central AI core node, consistent spacing
+  * `LayeredNetwork.jsx`: Added tooltip hover support, text label staggering logic
 * Confirmed `BrainDiagram` is cleanly separated from AI visuals
 * Verified AI diagrams render activation-based visuals using `data.ai_modules`
 * Added Tailwind CSS integration via `tailwind.config.cjs`, `postcss.config.cjs`, and `index.css`
@@ -29,36 +28,37 @@
 * Confirmed Tailwind working after postcss regression by purging plugins, reinstalling, and testing baseline flexbox layout with red/green split
 * Reintroduced real components (`BrainDiagram`, `AISystemDiagram`) into split layout
 * Enforced SVG height containment using `h-1/5`, `max-h-[20%]`, `min-h-[80px]`, and `object-contain`
-
+* Adjusted SVGs in all AI diagrams to use `viewBox`, `preserveAspectRatio`, and `w-full h-full`
+* Centralized layout sizing logic into `AISystemDiagram/index.jsx` for per-component height control
+* Refined label layout logic in `NodeLink.jsx`, `CortexSheet.jsx`, and `HeatmapSilhouette.jsx` to avoid text collisions
+* Improved inter-diagram spacing using Tailwind `gap-y-4` in AI diagram stack
 
 ## Immediate Focus
 
-* Validate each diagram honors its own wrapper bounds within `AISystemDiagram`
-* Confirm only one component is rendered at a time during debugging (if needed)
-* Continue enforcing consistent use of `className="w-full h-full"` or proportional height in child components
-* Remove placeholder debug content only after full layout integrity and component rendering confirmed
-
+* Validate each AI diagram respects its wrapper constraints and adjusts sizing proportionally
+* Ensure component-level spacing remains consistent regardless of container resizing
+* Verify that only one diagram is rendered at a time during debug/development toggles
+* Remove remaining placeholder or scaffolding elements once visual and data flow are stable
 
 ## In Progress
 
-* Ensure `region.name` fields align with frontend `regionPositions` mappings
-* Centralize `getFillColor()` and `normalizeName()` into shared utility module
-* Prepare fallback rendering for unknown brain regions or AI modules
-* Define consistent interactive behavior (hover tooltips, optional click handling)
-* Implement temporary outlines or debug visuals to confirm diagram boundaries
-
+* Ensure `region.name` fields align precisely with frontend `regionPositions` mappings
+* Centralize common functions like `getFillColor()` and `normalizeName()` in shared utility module
+* Implement fallback rendering for unknown or missing brain regions and AI modules
+* Standardize interactivity across diagrams (hover highlights, optional click interactions)
+* Add temporary visual outlines for component boundary debugging during layout tuning
 
 ## Next Steps
 
-* Animate transitions between cognitive states (fade, color morph, motion)
-* Add metadata UI support (tooltips, overlays, expandable AI module notes)
-* Optionally expose `/api/states` endpoint to dynamically list available states
-* Add responsive layout wrapper for side-by-side brain and AI visualizations
-* Implement testing suite (unit + integration) for data pipeline and component rendering
-* Document rendering behavior, module structure, and component inputs in `docs/frontend.md`
+* Animate transitions between cognitive states (fade effects, morphing shapes, motion pathing)
+* Add metadata UI overlays or interactive modals to show additional AI module details
+* Expose `/api/states` endpoint to support dynamically listing and previewing available brain states
+* Wrap diagram views in responsive container with toggled layouts for small vs large screens
+* Create a test suite (unit and integration) for validating rendering logic and backend-frontend integration
+* Document rendering behavior, component structure, and input expectations in `docs/frontend.md`
 
+---
 
-**Current Status**
-Split layout with `flex` and `flex-1` now renders all cognitive visualizations and dynamic AI diagrams. Component-specific enhancements (like animation and interactivity) are complete. Next focus is on refining inter-component behavior and cleaning up debug scaffolding.
-
+**Current Status**  
+All five AI visualizations are now rendering cleanly with consistent sizing, spacing, and interactive affordances. Layout control has been centralized, tooltips and text staggering reduce clutter, and the application now visually reflects dynamic brain state data end-to-end. Remaining tasks center around debugging tools, modularization, and final polish before animation and testing layers are added.
 

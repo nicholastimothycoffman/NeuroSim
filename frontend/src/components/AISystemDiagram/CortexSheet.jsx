@@ -24,9 +24,10 @@ const CortexSheet = ({ data }) => {
 	return (
 		<svg
 			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-			className="w-full h-full object-contain"
+			className="w-full h-auto object-contain"
 			preserveAspectRatio="xMidYMid meet"
 		>
+
 			{/* Optional background wave path */}
 			<path
 				d={modules.map((_, i) => {
@@ -59,7 +60,7 @@ const CortexSheet = ({ data }) => {
 						</circle>
 						<text
 							x={x}
-							y={y + radius + 2.5}
+							y={y + radius + 3.5}
 							textAnchor="middle"
 							fontSize="2.5"
 							fill="#e5e7eb"

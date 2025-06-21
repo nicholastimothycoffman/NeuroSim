@@ -21,7 +21,8 @@ const LayeredNetwork = ({ data }) => {
 		layers[i % layerCount].push(mod)
 	})
 
-	const svgWidth = 140
+	const dynamicWidth = Math.min(200, 80 + modules.length * 5)
+	const svgWidth = dynamicWidth
 	const svgHeight = 120
 	const layerSpacing = svgWidth / (layerCount + 1)
 	const nodeRadius = 4
@@ -85,7 +86,7 @@ const LayeredNetwork = ({ data }) => {
 						</circle>
 						<text
 							x={x}
-							y={y + nodeRadius + 6}
+							y={y + (mod.name.length % 2 === 0 ? nodeRadius + 6 : -nodeRadius - 5)}
 							textAnchor="middle"
 							fontSize="3"
 							fill="#e5e7eb"

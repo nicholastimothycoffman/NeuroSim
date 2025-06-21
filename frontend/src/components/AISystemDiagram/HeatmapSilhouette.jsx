@@ -24,7 +24,7 @@ const HeatmapSilhouette = ({ data }) => {
 	return (
 		<svg
 			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-			className="w-full h-full object-contain"
+			className="w-full h-auto object-contain"
 			preserveAspectRatio="xMidYMid meet"
 		>
 			{/* Silhouette outline */}
@@ -58,9 +58,9 @@ const HeatmapSilhouette = ({ data }) => {
 							<title>{mod.name.replace(/_/g, ' ')}</title>
 						</rect>
 						<text
-							x={i % 2 === 0 ? xOffset - 2 : xOffset + blockWidth + 2}
+							x={i % 2 === 0 ? 1 : svgWidth - 1}
 							y={y + blockHeight / 2}
-							textAnchor={i % 2 === 0 ? 'end' : 'start'}
+							textAnchor={i % 2 === 0 ? 'start' : 'end'}
 							alignmentBaseline="middle"
 							fontSize="5"
 							fill="#e5e7eb"

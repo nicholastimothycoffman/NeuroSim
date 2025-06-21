@@ -60,7 +60,7 @@ const RadialConnectome = ({ data }) => {
 						</circle>
 						<text
 							x={x}
-							y={y - 6}
+							y={y + (Math.sin(angle) > 0 ? 8 : -6)}
 							textAnchor="middle"
 							fontSize="5"
 							fill="#e5e7eb"

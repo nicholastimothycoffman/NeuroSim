@@ -22,7 +22,7 @@ const NodeLink = ({ data }) => {
 	return (
 		<svg
 			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-			className="w-full h-full"
+			className="w-full h-auto object-contain"
 			preserveAspectRatio="xMidYMid meet"
 		>
 
