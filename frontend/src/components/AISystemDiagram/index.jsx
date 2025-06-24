@@ -13,19 +13,19 @@ const AISystemDiagram = ({ data }) => {
 	return (
 		<div className="w-full h-full flex flex-col gap-y-2">
 			{/* You can tweak each diagram’s height here */}
-			<div className="w-full h-[18%] min-h-[80px] overflow-hidden flex items-center justify-center">
+			<div className="w-full h-fulloverflow-hidden flex items-center justify-center">
 				<NodeLink data={data} />
 			</div>
-			<div className="w-full h-[20%] min-h-[80px] overflow-hidden flex items-center justify-center">
+			<div className="w-full h-full overflow-hidden flex items-center justify-center">
 				<CortexSheet data={data} />
 			</div>
-			<div className="w-full h-[24%] min-h-[90px] overflow-hidden flex items-center justify-center">
+			<div className="w-full h-[40%] min-h-[50px] overflow-hidden flex items-center justify-center">
 				<HeatmapSilhouette data={data} />
 			</div>
-			<div className="w-full h-[18%] min-h-[80px] overflow-hidden flex items-center justify-center">
+			<div className="w-full h-full overflow-hidden flex items-center justify-center">
 				<RadialConnectome data={data} />
 			</div>
-			<div className="w-full h-[20%] min-h-[80px] overflow-hidden flex items-center justify-center">
+			<div className="w-full h-full overflow-hidden flex items-center justify-center">
 				<LayeredNetwork data={data} />
 			</div>
 		</div>

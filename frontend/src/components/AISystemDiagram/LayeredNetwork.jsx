@@ -26,6 +26,7 @@ const LayeredNetwork = ({ data }) => {
 	const svgHeight = 120
 	const layerSpacing = svgWidth / (layerCount + 1)
 	const nodeRadius = 4
+	const textFontSize = 3
 
 	// Compute positions
 	const positions = {}
@@ -88,7 +89,7 @@ const LayeredNetwork = ({ data }) => {
 							x={x}
 							y={y + (mod.name.length % 2 === 0 ? nodeRadius + 6 : -nodeRadius - 5)}
 							textAnchor="middle"
-							fontSize="3"
+							fontSize={textFontSize}
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ')}

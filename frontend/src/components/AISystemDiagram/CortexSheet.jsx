@@ -14,20 +14,20 @@ const CortexSheet = ({ data }) => {
 		return <p>No AI module data available.</p>
 	}
 
-	// Relative viewBox size
+	// Dimensions and node settings
 	const svgWidth = 200
 	const svgHeight = 50
 	const waveAmplitude = 10
 	const spacing = svgWidth / (modules.length + 1)
-	const radius = 3.5
+	const nodeRadius = 4
+	const textFontSize = 3
 
 	return (
 		<svg
 			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-			className="w-full h-auto object-contain"
+			className="w-full h-full object-contain"
 			preserveAspectRatio="xMidYMid meet"
 		>
-
 			{/* Optional background wave path */}
 			<path
 				d={modules.map((_, i) => {
@@ -50,19 +50,17 @@ const CortexSheet = ({ data }) => {
 						<circle
 							cx={x}
 							cy={y}
-							r={radius}
+							r={nodeRadius}
 							fill={getFillColor(mod.activation)}
-							stroke="#ffffff"
-							strokeWidth="0.5"
 							style={{ transition: 'fill 0.3s ease-in-out' }}
 						>
 							<title>{mod.name.replace(/_/g, ' ')}</title>
 						</circle>
 						<text
 							x={x}
-							y={y + radius + 3.5}
+							y={y + nodeRadius + 6}
 							textAnchor="middle"
-							fontSize="2.5"
+							fontSize={textFontSize}
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ')}

@@ -35,6 +35,7 @@
 
 ## Immediate Focus
 
+* Bring AI diagrams closer together on browser
 * Validate each AI diagram respects its wrapper constraints and adjusts sizing proportionally
 * Ensure component-level spacing remains consistent regardless of container resizing
 * Verify that only one diagram is rendered at a time during debug/development toggles

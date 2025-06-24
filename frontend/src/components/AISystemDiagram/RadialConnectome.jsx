@@ -18,8 +18,10 @@ const RadialConnectome = ({ data }) => {
 	const svgHeight = 150
 	const cx = svgWidth / 2
 	const cy = svgHeight / 2
-	const radius = 50
+	const outerRadius = 50
 	const angleStep = (2 * Math.PI) / modules.length
+	const nodeRadius = 4
+	const textFontSize = 3
 
 	return (
 		<svg
@@ -35,8 +37,8 @@ const RadialConnectome = ({ data }) => {
 			{/* Radial nodes and connections */}
 			{modules.map((mod, i) => {
 				const angle = i * angleStep
-				const x = cx + radius * Math.cos(angle)
-				const y = cy + radius * Math.sin(angle)
+				const x = cx + outerRadius * Math.cos(angle)
+				const y = cy + outerRadius * Math.sin(angle)
 				const color = getFillColor(mod.activation)
 
 				return (
@@ -52,7 +54,7 @@ const RadialConnectome = ({ data }) => {
 						<circle
 							cx={x}
 							cy={y}
-							r="4"
+							r={nodeRadius}
 							fill={color}
 							style={{ transition: 'fill 0.3s ease-in-out' }}
 						>
@@ -60,9 +62,9 @@ const RadialConnectome = ({ data }) => {
 						</circle>
 						<text
 							x={x}
-							y={y + (Math.sin(angle) > 0 ? 8 : -6)}
+							y={y + (Math.sin(angle) > 0 ? nodeRadius + 6 : -nodeRadius - 6)}
 							textAnchor="middle"
-							fontSize="5"
+							fontSize={textFontSize}
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ')}

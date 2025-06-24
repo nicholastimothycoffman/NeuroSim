@@ -14,7 +14,8 @@ const NodeLink = ({ data }) => {
 		return <p>No AI module data available.</p>
 	}
 
-	const radius = 5
+	const nodeRadius = 4
+	const textFontSize = 3
 	const svgWidth = 200
 	const svgHeight = 50
 	const spacing = svgWidth / (modules.length + 1)
@@ -22,10 +23,9 @@ const NodeLink = ({ data }) => {
 	return (
 		<svg
 			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-			className="w-full h-auto object-contain"
+			className="w-full h-full object-contain"
 			preserveAspectRatio="xMidYMid meet"
 		>
-
 			{/* Connecting lines */}
 			{modules.map((_, idx) => {
 				if (idx === 0) return null
@@ -49,13 +49,14 @@ const NodeLink = ({ data }) => {
 			{modules.map((mod, idx) => {
 				const x = spacing * (idx + 1)
 				const y = svgHeight / 2
+				const labelOffset = idx % 2 === 0 ? -(nodeRadius + 5) : (nodeRadius + 6)
 
 				return (
 					<g key={mod.name}>
 						<circle
 							cx={x}
 							cy={y}
-							r={radius}
+							r={nodeRadius}
 							fill={getFillColor(mod.activation)}
 							stroke="#ffffff"
 							strokeWidth="1"
@@ -65,9 +66,9 @@ const NodeLink = ({ data }) => {
 						</circle>
 						<text
 							x={x}
-							y={idx % 2 === 0 ? y - radius - 10 : y + radius + 12}
+							y={y + labelOffset}
 							textAnchor="middle"
-							fontSize="5"
+							fontSize={textFontSize}
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ')}
