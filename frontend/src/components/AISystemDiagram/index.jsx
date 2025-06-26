@@ -11,22 +11,41 @@ const AISystemDiagram = ({ data }) => {
 	}
 
 	return (
-		<div className="w-full h-full flex flex-col gap-y-[1px]">
-			{/* You can tweak each diagram’s height here */}
-			<div className="w-full h-[20%] min-h-[70px] overflow-hidden flex items-center justify-center">
-				<NodeLink data={data} />
+		<div className="w-full h-full flex flex-col gap-y-0 justify-between">
+			{/* Node Link Diagram */}
+			<div className="w-full flex flex-col h-[28%] max-h-[180px]">
+				<h3 className="text-lg font-semibold text-center mb-1 text-blue-300">Node Link</h3>
+				<div className="flex-1 flex items-center justify-center overflow-hidden">
+					<NodeLink data={data} />
+				</div>
 			</div>
-			<div className="w-full h-[20%] min-h-[70px] overflow-hidden flex items-center justify-center">
-				<CortexSheet data={data} />
+			{/* Cortex Sheet Diagram */}
+			<div className="w-full flex flex-col h-[22%] max-h-[150px] mt-8">
+				<h3 className="text-lg font-semibold text-center mb-1 text-yellow-300">Cortex Sheet</h3>
+				<div className="flex-1 flex items-center justify-center overflow-hidden mt-[-8px]">
+					<CortexSheet data={data} />
+				</div>
 			</div>
-			<div className="w-full h-[20%] min-h-[70px] overflow-hidden flex items-center justify-center">
-				<HeatmapSilhouette data={data} />
+			{/* Heatmap Silhouette Diagram */}
+			<div className="w-full flex flex-col h-[22%] max-h-[120px] mt-16">
+				<h3 className="text-lg font-semibold text-center mb-6 text-pink-300">Heatmap Silhouette</h3>
+				<div className="flex-1 flex items-center justify-center overflow-hidden">
+					<HeatmapSilhouette data={data} />
+				</div>
 			</div>
-			<div className="w-full h-[20%] min-h-[70px] overflow-hidden flex items-center justify-center">
-				<RadialConnectome data={data} />
+			{/* Radial Connectome Diagram */}
+			<div className="w-full flex flex-col h-[48%] max-h-[350px] mt-16">
+				<h3 className="text-lg font-semibold text-center mb-10 text-green-300">Radial Connectome</h3>
+				<div className="flex-1 flex items-center justify-center overflow-hidden">
+					<RadialConnectome data={data} />
+				</div>
 			</div>
-			<div className="w-full h-[20%] min-h-[70px] overflow-hidden flex items-center justify-center">
-				<LayeredNetwork data={data} />
+			{/* Layered Network Diagram */}
+			<div className="w-full flex flex-col h-[46%] max-h-[350px] mt-16">
+				<h3 className="text-lg font-semibold text-center mb-1 text-purple-300">Layered Network</h3>
+				<div className="flex-1 flex items-center justify-center overflow-hidden">
+					<LayeredNetwork data={data} />
+				</div>
 			</div>
 		</div>
 	)

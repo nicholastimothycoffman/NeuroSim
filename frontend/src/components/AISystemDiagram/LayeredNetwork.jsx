@@ -21,18 +21,19 @@ const LayeredNetwork = ({ data }) => {
 		layers[i % layerCount].push(mod)
 	})
 
-	const dynamicWidth = Math.min(200, 80 + modules.length * 5)
-	const svgWidth = 200
-	const svgHeight = 50
+	// To elongate the links, increase svgWidth and svgHeight, and increase layerSpacing and vertical spacing
+	const dynamicWidth = Math.min(3200, 1600 + modules.length * 100) // Increased from 2400, 1200
+	const svgWidth = dynamicWidth
+	const svgHeight = 1600 // Increased from 1200
 	const layerSpacing = svgWidth / (layerCount + 1)
-	const nodeRadius = 4
-	const textFontSize = 3
+	const nodeRadius = 72 // Increased from 56
+	const textFontSize = 80 // Increased from 64
 
 	// Compute positions
 	const positions = {}
 	const getNodePos = (layerIndex, nodeIndex, nodesInLayer) => {
 		const x = layerSpacing * (layerIndex + 1)
-		const spacing = svgHeight / (nodesInLayer + 1)
+		const spacing = svgHeight / (nodesInLayer + 1) * 1.3
 		const y = spacing * (nodeIndex + 1)
 		return { x, y }
 	}
@@ -87,7 +88,7 @@ const LayeredNetwork = ({ data }) => {
 						</circle>
 						<text
 							x={x}
-							y={y + (mod.name.length % 2 === 0 ? nodeRadius + 4 : -nodeRadius - 4)}
+							y={y + (mod.name.length % 2 === 0 ? nodeRadius + 60 : -nodeRadius - 60)}
 							textAnchor="middle"
 							fontSize={textFontSize}
 							fill="#e5e7eb"

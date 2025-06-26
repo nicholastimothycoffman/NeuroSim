@@ -14,14 +14,16 @@ const RadialConnectome = ({ data }) => {
 		return <p>No AI module data available.</p>
 	}
 
-	const svgWidth = 150
-	const svgHeight = 150
-	const cx = 100
-	const cy = 25
-	const outerRadius = 20
+	const svgWidth = 1200 // Drastically increase from 600
+	// Add extra padding to the top of the SVG
+	const svgHeight = 1240 // Increased from 1200 to add 40px padding at the top
+	const topPadding = 40
+	const cx = svgWidth / 2
+	const cy = svgHeight / 2 + topPadding / 2 // Shift center down by half the padding
+	const outerRadius = 520 // Drastically increase from 260
 	const angleStep = (2 * Math.PI) / modules.length
-	const nodeRadius = 4
-	const textFontSize = 3
+	const nodeRadius = 60 // Increased from 48
+	const textFontSize = 68 // Increased from 56
 
 	return (
 		<svg
@@ -40,6 +42,21 @@ const RadialConnectome = ({ data }) => {
 				const x = cx + outerRadius * Math.cos(angle)
 				const y = cy + outerRadius * Math.sin(angle)
 				const color = getFillColor(mod.activation)
+
+				// Custom label offset for topmost and bottommost nodes and specific modules
+				let labelOffset = 18
+				if (mod.name === 'multitasking_load') {
+					labelOffset = 40 // Reduced from 80 to prevent clipping
+				} else if (mod.name === 'threat_analysis') {
+					labelOffset = 80 // Keep this for upward spacing
+				} else if (Math.abs(Math.sin(angle)) < 0.01) { // Top or bottom node
+					if (Math.cos(angle) > 0) {
+						labelOffset = 4 // Top node
+					} else {
+						labelOffset = 60 // Bottom node
+					}
+				}
+				const yLabel = y + (mod.name === 'multitasking_load' || Math.sin(angle) > 0 ? nodeRadius + labelOffset : -nodeRadius - (mod.name === 'threat_analysis' ? labelOffset : labelOffset))
 
 				return (
 					<g key={mod.name}>
@@ -62,7 +79,7 @@ const RadialConnectome = ({ data }) => {
 						</circle>
 						<text
 							x={x}
-							y={y + (Math.sin(angle) > 0 ? nodeRadius + 6 : -nodeRadius - 6)}
+							y={yLabel}
 							textAnchor="middle"
 							fontSize={textFontSize}
 							fill="#e5e7eb"

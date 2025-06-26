@@ -49,7 +49,7 @@ const HeatmapSilhouette = ({ data }) => {
 							y={y + blockHeight / 2}
 							textAnchor={i % 2 === 0 ? 'end' : 'start'}
 							alignmentBaseline="middle"
-							fontSize="3"
+							fontSize="10"
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ').slice(0, 18)}

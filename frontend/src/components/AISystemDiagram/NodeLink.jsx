@@ -14,10 +14,10 @@ const NodeLink = ({ data }) => {
 		return <p>No AI module data available.</p>
 	}
 
-	const nodeRadius = 4
-	const textFontSize = 3
-	const svgWidth = 200
-	const svgHeight = 50
+	const nodeRadius = 12 // Increased from 6
+	const textFontSize = 12 // Increased from 9
+	const svgWidth = 600 // Increased from 400
+	const svgHeight = 120 // Increased from 80
 	const spacing = svgWidth / (modules.length + 1)
 
 	return (
@@ -49,7 +49,7 @@ const NodeLink = ({ data }) => {
 			{modules.map((mod, idx) => {
 				const x = spacing * (idx + 1)
 				const y = svgHeight / 2
-				const labelOffset = idx % 2 === 0 ? -(nodeRadius + 5) : (nodeRadius + 6)
+				const labelOffset = idx % 2 === 0 ? -(nodeRadius + 12) : (nodeRadius + 15)
 
 				return (
 					<g key={mod.name}>
