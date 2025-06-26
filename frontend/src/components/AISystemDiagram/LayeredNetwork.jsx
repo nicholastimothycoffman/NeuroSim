@@ -22,8 +22,8 @@ const LayeredNetwork = ({ data }) => {
 	})
 
 	const dynamicWidth = Math.min(200, 80 + modules.length * 5)
-	const svgWidth = dynamicWidth
-	const svgHeight = 120
+	const svgWidth = 200
+	const svgHeight = 50
 	const layerSpacing = svgWidth / (layerCount + 1)
 	const nodeRadius = 4
 	const textFontSize = 3
@@ -45,7 +45,7 @@ const LayeredNetwork = ({ data }) => {
 
 	return (
 		<svg
-			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+			viewBox="0 0 200 50"
 			className="w-full h-full object-contain"
 			preserveAspectRatio="xMidYMid meet"
 		>
@@ -87,7 +87,7 @@ const LayeredNetwork = ({ data }) => {
 						</circle>
 						<text
 							x={x}
-							y={y + (mod.name.length % 2 === 0 ? nodeRadius + 6 : -nodeRadius - 5)}
+							y={y + (mod.name.length % 2 === 0 ? nodeRadius + 4 : -nodeRadius - 4)}
 							textAnchor="middle"
 							fontSize={textFontSize}
 							fill="#e5e7eb"

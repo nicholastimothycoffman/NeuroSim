@@ -16,16 +16,16 @@ const RadialConnectome = ({ data }) => {
 
 	const svgWidth = 150
 	const svgHeight = 150
-	const cx = svgWidth / 2
-	const cy = svgHeight / 2
-	const outerRadius = 50
+	const cx = 100
+	const cy = 25
+	const outerRadius = 20
 	const angleStep = (2 * Math.PI) / modules.length
 	const nodeRadius = 4
 	const textFontSize = 3
 
 	return (
 		<svg
-			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+			viewBox="0 0 200 50"
 			className="w-full h-full object-contain"
 			preserveAspectRatio="xMidYMid meet"
 		>

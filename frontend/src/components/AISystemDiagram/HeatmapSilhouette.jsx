@@ -15,15 +15,15 @@ const HeatmapSilhouette = ({ data }) => {
 	}
 
 	// Scalable dimensions
-	const svgWidth = 40
+	const svgWidth = 200
 	const svgHeight = 80
 	const blockHeight = svgHeight / modules.length
-	const blockWidth = 25
+	const blockWidth = 15
 	const xOffset = (svgWidth - blockWidth) / 2
 
 	return (
 		<svg
-			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+			viewBox="0 0 200 50"
 			className="w-full h-full object-contain"
 			preserveAspectRatio="xMidYMid meet"
 		>
@@ -45,11 +45,11 @@ const HeatmapSilhouette = ({ data }) => {
 							<title>{mod.name.replace(/_/g, ' ')}</title>
 						</rect>
 						<text
-							x={i % 2 === 0 ? 1 : svgWidth + 1}
+							x={i % 2 === 0 ? xOffset - 4 : xOffset + blockWidth + 4}
 							y={y + blockHeight / 2}
 							textAnchor={i % 2 === 0 ? 'end' : 'start'}
 							alignmentBaseline="middle"
-							fontSize="4"
+							fontSize="3"
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ').slice(0, 18)}
