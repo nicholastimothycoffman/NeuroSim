@@ -24,7 +24,7 @@ const CortexSheet = ({ data }) => {
 
 	return (
 		<svg
-			viewBox="0 0 200 50"
+			viewBox={`0 0 ${svgWidth} ${svgHeight}`}
 			className="w-full h-full object-contain"
 			preserveAspectRatio="xMidYMid meet"
 		>
