@@ -15,10 +15,10 @@ const HeatmapSilhouette = ({ data }) => {
 	}
 
 	// Scalable dimensions
-	const svgWidth = 200
-	const svgHeight = 80
+	const svgWidth = 400 // Increased from 200
+	const svgHeight = 240 // Increased from 80
 	const blockHeight = svgHeight / modules.length
-	const blockWidth = 15
+	const blockWidth = 40 // Increased from 15
 	const xOffset = (svgWidth - blockWidth) / 2
 
 	return (
@@ -49,7 +49,7 @@ const HeatmapSilhouette = ({ data }) => {
 							y={y + blockHeight / 2}
 							textAnchor={i % 2 === 0 ? 'end' : 'start'}
 							alignmentBaseline="middle"
-							fontSize="10"
+							fontSize="24" // Increased from 10
 							fill="#e5e7eb"
 						>
 							{mod.name.replace(/_/g, ' ').slice(0, 18)}

@@ -11,7 +11,7 @@ const AISystemDiagram = ({ data }) => {
 	}
 
 	return (
-		<div className="w-full h-full flex flex-col gap-y-0 justify-between">
+		<div className="w-full h-full flex flex-col gap-y-16 justify-between">
 			{/* Node Link Diagram */}
 			<div className="w-full flex flex-col h-[28%] max-h-[180px]">
 				<h3 className="text-lg font-semibold text-center mb-1 text-blue-300">Node Link</h3>
@@ -20,14 +20,14 @@ const AISystemDiagram = ({ data }) => {
 				</div>
 			</div>
 			{/* Cortex Sheet Diagram */}
-			<div className="w-full flex flex-col h-[22%] max-h-[150px] mt-8">
+			<div className="w-full flex flex-col h-[22%] max-h-[150px] mt-16">
 				<h3 className="text-lg font-semibold text-center mb-1 text-yellow-300">Cortex Sheet</h3>
 				<div className="flex-1 flex items-center justify-center overflow-hidden mt-[-8px]">
 					<CortexSheet data={data} />
 				</div>
 			</div>
 			{/* Heatmap Silhouette Diagram */}
-			<div className="w-full flex flex-col h-[22%] max-h-[120px] mt-16">
+			<div className="w-full flex flex-col h-[32%] max-h-[220px] mt-16">
 				<h3 className="text-lg font-semibold text-center mb-6 text-pink-300">Heatmap Silhouette</h3>
 				<div className="flex-1 flex items-center justify-center overflow-hidden">
 					<HeatmapSilhouette data={data} />
