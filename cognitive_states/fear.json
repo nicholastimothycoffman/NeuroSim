@@ -1,0 +1,13 @@
+{
+  "regions": [
+    { "name": "amygdala", "activation": 0.9 },
+    { "name": "prefrontal_cortex", "activation": 0.3 }
+  ],
+  "ai_analog": "Threat detection subroutine activation",
+  "ai_modules": [
+    { "name": "threat_analysis", "activation": 1.0 },
+    { "name": "escape_routing", "activation": 0.8 },
+    { "name": "risk_prediction", "activation": 0.9 },
+    { "name": "non_essential_suppression", "activation": 0.7 }
+  ]
+}

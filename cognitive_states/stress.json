@@ -1,0 +1,14 @@
+{
+  "regions": [
+    { "name": "amygdala", "activation": 0.85 },
+    { "name": "prefrontal_cortex", "activation": 0.4 },
+    { "name": "hippocampus", "activation": 0.5 }
+  ],
+  "ai_analog": "System under strain / multi-threaded conflict / background error escalation",
+  "ai_modules": [
+    { "name": "threat_analysis", "activation": 0.95 },
+    { "name": "multitasking_load", "activation": 0.85 },
+    { "name": "priority_conflict_resolution", "activation": 0.7 },
+    { "name": "error_suppression", "activation": 0.6 }
+  ]
+}

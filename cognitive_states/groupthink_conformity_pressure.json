@@ -1,0 +1,13 @@
+{
+  "regions": [
+    { "name": "prefrontal_cortex", "activation": 0.4 },
+    { "name": "insula", "activation": 0.6 }
+  ],
+  "ai_analog": "Overfitting to biased training data / conformity pressure in ensemble systems",
+  "ai_modules": [
+    { "name": "model_alignment", "activation": 0.9 },
+    { "name": "bias_amplification", "activation": 0.8 },
+    { "name": "peer_signal_weighting", "activation": 0.85 },
+    { "name": "novelty_suppression", "activation": 0.7 }
+  ]
+}

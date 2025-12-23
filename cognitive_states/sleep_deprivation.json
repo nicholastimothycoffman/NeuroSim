@@ -1,0 +1,14 @@
+{
+  "regions": [
+    { "name": "hypothalamus", "activation": 0.7 },
+    { "name": "prefrontal_cortex", "activation": 0.2 },
+    { "name": "parietal_lobe", "activation": 0.3 }
+  ],
+  "ai_analog": "Clock drift / cache invalidation / skipped system checks",
+  "ai_modules": [
+    { "name": "clock_sync", "activation": 0.2 },
+    { "name": "error_accumulation", "activation": 0.8 },
+    { "name": "redundancy_checks", "activation": 0.3 },
+    { "name": "system_integrity", "activation": 0.5 }
+  ]
+}

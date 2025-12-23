@@ -1,0 +1,14 @@
+{
+  "regions": [
+    { "name": "prefrontal_cortex", "activation": 0.3 },
+    { "name": "thalamus", "activation": 0.4 },
+    { "name": "anterior_cingulate", "activation": 0.5 }
+  ],
+  "ai_analog": "Gradient vanishing / parameter drift",
+  "ai_modules": [
+    { "name": "signal_noise_ratio", "activation": 0.3 },
+    { "name": "memory_decay", "activation": 0.8 },
+    { "name": "processing_precision", "activation": 0.4 },
+    { "name": "response_latency", "activation": 0.7 }
+  ]
+}

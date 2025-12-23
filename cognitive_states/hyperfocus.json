@@ -1,0 +1,13 @@
+{
+  "regions": [
+    { "name": "prefrontal_cortex", "activation": 0.9 },
+    { "name": "parietal_lobe", "activation": 0.8 }
+  ],
+  "ai_analog": "Attention locking / pruning tree depth / exploit over explore",
+  "ai_modules": [
+    { "name": "focus_lock", "activation": 1.0 },
+    { "name": "selective_attention", "activation": 0.95 },
+    { "name": "exploration_suppression", "activation": 0.8 },
+    { "name": "loop_depth_control", "activation": 0.9 }
+  ]
+}

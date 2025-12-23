@@ -1,0 +1,19 @@
+{
+  "regions": [
+    {
+      "name": "thalamus",
+      "activation": 0.4
+    },
+    {
+      "name": "hippocampus",
+      "activation": 0.9
+    }
+  ],
+  "ai_analog": "System reset / memory consolidation / low CPU temp",
+  "ai_modules": [
+    { "name": "memory_consolidation", "activation": 0.9 },
+    { "name": "fatigue", "activation": 0.1 },
+    { "name": "error_correction", "activation": 0.7 },
+    { "name": "system_maintenance", "activation": 0.6 }
+  ]
+}
