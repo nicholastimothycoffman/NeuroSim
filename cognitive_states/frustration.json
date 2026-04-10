@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "frustration",
+  "description": "A state arising from repeated failure or blocked goal attainment, characterized by heightened conflict monitoring, emotional agitation, and continued but strained effort toward resolution.",
+  "brain_regions": [
     { "name": "anterior_cingulate", "activation": 0.8 },
     { "name": "amygdala", "activation": 0.7 }
   ],
@@ -9,5 +11,10 @@
     { "name": "reward_evaluation", "activation": 0.5 },
     { "name": "persistence_drive", "activation": 0.7 },
     { "name": "conflict_resolution", "activation": 0.6 }
-  ]
+  ],
+  "metadata": {
+    "category": "emotional",
+    "intensity": "medium",
+    "source": "manual"
+  }
 }

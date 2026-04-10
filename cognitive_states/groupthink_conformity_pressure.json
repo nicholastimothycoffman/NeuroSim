@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "groupthink_conformity_pressure",
+  "description": "A socially driven cognitive state characterized by heightened sensitivity to peer signals, suppression of dissenting or novel ideas, and increased alignment with perceived group consensus, often at the expense of independent critical evaluation.",
+  "brain_regions": [
     { "name": "prefrontal_cortex", "activation": 0.4 },
     { "name": "insula", "activation": 0.6 }
   ],
@@ -9,5 +11,10 @@
     { "name": "bias_amplification", "activation": 0.8 },
     { "name": "peer_signal_weighting", "activation": 0.85 },
     { "name": "novelty_suppression", "activation": 0.7 }
-  ]
+  ],
+  "metadata": {
+    "category": "social",
+    "intensity": "medium",
+    "source": "manual"
+  }
 }

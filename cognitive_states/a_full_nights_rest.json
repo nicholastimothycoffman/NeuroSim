@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "a_full_nights_rest",
+  "description": "A fully restored cognitive and physiological baseline characterized by strong memory consolidation, low fatigue, and effective system maintenance.",
+  "brain_regions": [
     {
       "name": "thalamus",
       "activation": 0.4
@@ -15,5 +17,10 @@
     { "name": "fatigue", "activation": 0.1 },
     { "name": "error_correction", "activation": 0.7 },
     { "name": "system_maintenance", "activation": 0.6 }
-  ]
+  ],
+  "metadata": {
+    "category": "physiological",
+    "intensity": "low",
+    "source": "manual"
+  }
 }

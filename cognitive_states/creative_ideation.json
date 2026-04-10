@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "creative_ideation",
+  "description": "A generative cognitive state characterized by increased associative thinking, relaxed constraints, exploration of novel patterns, and expansion of semantic connections.",
+  "brain_regions": [
     { "name": "default_mode_network", "activation": 0.75 },
     { "name": "temporal_lobe", "activation": 0.85 }
   ],
@@ -9,5 +11,10 @@
     { "name": "novelty_bias", "activation": 0.8 },
     { "name": "semantic_network_expansion", "activation": 0.7 },
     { "name": "rule_relaxation", "activation": 0.6 }
-  ]
+  ],
+  "metadata": {
+    "category": "cognitive",
+    "intensity": "medium",
+    "source": "manual"
+  }
 }

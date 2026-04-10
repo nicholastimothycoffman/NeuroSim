@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "cardiovascular_exercise",
+  "description": "A physiologically elevated state characterized by increased motor activity, enhanced systemic efficiency, and improved energy distribution, often leading to temporary boosts in cognitive clarity and reduced processing latency despite heightened metabolic demand.",
+  "brain_regions": [
     { "name": "motor_cortex", "activation": 0.7 },
     { "name": "hypothalamus", "activation": 0.6 }
   ],
@@ -9,5 +11,10 @@
     { "name": "system_efficiency", "activation": 0.9 },
     { "name": "cooling_control", "activation": 0.7 },
     { "name": "output_latency", "activation": 0.3 }
-  ]
+  ],
+  "metadata": {
+    "category": "physiological",
+    "intensity": "medium",
+    "source": "manual"
+  }
 }

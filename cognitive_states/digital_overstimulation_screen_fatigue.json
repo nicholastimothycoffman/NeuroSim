@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "digital_overstimulation_screen_fatigue",
+  "description": "A state of sensory and cognitive overload caused by sustained high-intensity digital input, characterized by excessive visual processing demand, frequent context switching, rising processing strain, and reduced executive control.",
+  "brain_regions": [
     { "name": "visual_cortex", "activation": 0.9 },
     { "name": "prefrontal_cortex", "activation": 0.3 }
   ],
@@ -9,5 +11,10 @@
     { "name": "context_switching", "activation": 0.9 },
     { "name": "processing_heat", "activation": 0.8 },
     { "name": "cognitive_saturation", "activation": 0.85 }
-  ]
+  ],
+  "metadata": {
+    "category": "physiological",
+    "intensity": "high",
+    "source": "manual"
+  }
 }

@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "stress",
+  "description": "A state of heightened internal strain marked by increased threat sensitivity, competing demands on attention, and reduced executive control stability.",
+  "brain_regions": [
     { "name": "amygdala", "activation": 0.85 },
     { "name": "prefrontal_cortex", "activation": 0.4 },
     { "name": "hippocampus", "activation": 0.5 }
@@ -10,5 +12,10 @@
     { "name": "multitasking_load", "activation": 0.85 },
     { "name": "priority_conflict_resolution", "activation": 0.7 },
     { "name": "error_suppression", "activation": 0.6 }
-  ]
+  ],
+  "metadata": {
+    "category": "emotional",
+    "intensity": "high",
+    "source": "manual"
+  }
 }

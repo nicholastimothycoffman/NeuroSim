@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cognitive State",
+  "type": "object",
+  "required": [
+    "state_name",
+    "description",
+    "brain_regions",
+    "ai_analog",
+    "ai_modules",
+    "metadata"
+  ],
+  "properties": {
+    "state_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "brain_regions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "activation"],
+        "properties": {
+          "name": { "type": "string" },
+          "activation": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "ai_analog": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ai_modules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "activation"],
+        "properties": {
+          "name": { "type": "string" },
+          "activation": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["category", "intensity", "source"],
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": ["cognitive", "emotional", "physiological", "social"]
+        },
+        "intensity": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        },
+        "source": {
+          "type": "string",
+          "enum": ["manual", "generated"]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "flow",
+  "description": "An optimal cognitive state characterized by deep task immersion, efficient feedback loops, minimal latency, and strong coordination between executive control and action systems.",
+  "brain_regions": [
     { "name": "prefrontal_cortex", "activation": 0.8 },
     { "name": "motor_cortex", "activation": 0.9 }
   ],
@@ -9,5 +11,10 @@
     { "name": "task_focus", "activation": 0.9 },
     { "name": "background_noise_filtering", "activation": 0.85 },
     { "name": "latency_management", "activation": 0.95 }
-  ]
+  ],
+  "metadata": {
+    "category": "cognitive",
+    "intensity": "medium",
+    "source": "manual"
+  }
 }

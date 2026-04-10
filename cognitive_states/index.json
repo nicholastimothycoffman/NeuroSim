@@ -1,0 +1,19 @@
+{
+  "states": [
+    "a_full_nights_rest",
+    "anxiety",
+    "caffeination",
+    "cardiovascular_exercise",
+    "cognitive_overload",
+    "creative_ideation",
+    "digital_overstimulation_screen_fatigue",
+    "fear",
+    "flow",
+    "frustration",
+    "groupthink_conformity_pressure",
+    "hyperfocus",
+    "mental_fatigue",
+    "sleep_deprivation",
+    "stress"
+  ]
+}

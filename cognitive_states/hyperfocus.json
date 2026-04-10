@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "hyperfocus",
+  "description": "A state of intense and narrowly directed attention characterized by sustained task engagement, strong suppression of external stimuli, reduced exploratory behavior, and increased risk of attentional rigidity.",
+  "brain_regions": [
     { "name": "prefrontal_cortex", "activation": 0.9 },
     { "name": "parietal_lobe", "activation": 0.8 }
   ],
@@ -9,5 +11,10 @@
     { "name": "selective_attention", "activation": 0.95 },
     { "name": "exploration_suppression", "activation": 0.8 },
     { "name": "loop_depth_control", "activation": 0.9 }
-  ]
+  ],
+  "metadata": {
+    "category": "cognitive",
+    "intensity": "high",
+    "source": "manual"
+  }
 }

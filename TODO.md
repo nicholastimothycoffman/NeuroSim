@@ -1,65 +1,126 @@
-# NeuroSim TODO
+# NeuroSim TODO (Updated)
 
 ## Completed
 
-* Verified backend `/api/state/{state_name}` functions correctly using FastAPI
-* Implemented file path handling with `pathlib` for robust JSON loading
-* Confirmed frontend `App.jsx` fetches cognitive state data and routes to components
-* Standardized `.json` schema with `regions`, `ai_modules`, and `ai_analog`
-* Migrated all `.json` files using `convert_states_format.py`
-* Identified and curated 15 core brain states with strong AI analogs
-* Designed and documented long-term visual layout (lateral/medial brain + 5 AI views)
-* Implemented conditional rendering of `BrainDiagram` and `AISystemDiagram`
-* Created `LateralView.jsx` and `MedialView.jsx` with functional SVG rendering
-* Visualized brain region activation using color-coded circles
-* Verified end-to-end data flow from backend to dynamic SVG visuals
-* Added logging in `App.jsx`, `BrainDiagram.jsx`, and region views for live debugging
-* Implemented all 5 dynamic AI diagram components with correct prop handling and visual enhancements:
-  * `NodeLink.jsx`: Added node connections, hover tooltips, animated fill transitions
-  * `CortexSheet.jsx`: Added hover tooltips, animated fill transitions, text staggering
-  * `HeatmapSilhouette.jsx`: Added hover tooltips, vertical label staggering (left/right)
-  * `RadialConnectome.jsx`: Added tooltips, central AI core node, consistent spacing
-  * `LayeredNetwork.jsx`: Added tooltip hover support, text label staggering logic
-* Confirmed `BrainDiagram` is cleanly separated from AI visuals
-* Verified AI diagrams render activation-based visuals using `data.ai_modules`
-* Added Tailwind CSS integration via `tailwind.config.cjs`, `postcss.config.cjs`, and `index.css`
-* Replaced `w-1/2` with `flex-1` and verified `flex`-based layout intention
-* Verified Tailwind is active using `text-pink-600` / `bg-yellow-300` diagnostic elements
-* Confirmed Tailwind working after postcss regression by purging plugins, reinstalling, and testing baseline flexbox layout with red/green split
-* Reintroduced real components (`BrainDiagram`, `AISystemDiagram`) into split layout
-* Enforced SVG height containment using `h-1/5`, `max-h-[20%]`, `min-h-[80px]`, and `object-contain`
-* Adjusted SVGs in all AI diagrams to use `viewBox`, `preserveAspectRatio`, and `w-full h-full`
-* Centralized layout sizing logic into `AISystemDiagram/index.jsx` for per-component height control
-* Refined label layout logic in `NodeLink.jsx`, `CortexSheet.jsx`, and `HeatmapSilhouette.jsx` to avoid text collisions
-* Improved inter-diagram spacing using Tailwind `gap-y-4` in AI diagram stack
+### Core System Integration
+- Verified backend /api/state/{state_name} functions correctly using FastAPI
+- Confirmed frontend App.jsx fetches and renders cognitive state data end-to-end
+- Established stable backend → frontend data pipeline
 
-## Immediate Focus
+### Cognitive State Data Model
+- Standardized JSON schema with:
+  - state_name
+  - description
+  - brain_regions
+  - ai_modules
+  - ai_analog
+  - metadata
+- Migrated and validated all cognitive state files via validate_states.py
+- Introduced category taxonomy:
+  - cognitive, emotional, physiological, social
+- Curated and normalized full set of cognitive states with AI analog mappings
 
-* Bring AI diagrams closer together on browser
-* Validate each AI diagram respects its wrapper constraints and adjusts sizing proportionally
-* Ensure component-level spacing remains consistent regardless of container resizing
-* Verify that only one diagram is rendered at a time during debug/development toggles
-* Remove remaining placeholder or scaffolding elements once visual and data flow are stable
+### Visualization System
+- Implemented BrainDiagram with lateral and medial views
+- Implemented 5 AI visualization systems:
+  - Node-link network
+  - Radial connectome
+  - Heatmap silhouette
+  - Layered network
+  - Cortex sheet
+- Established consistent SVG scaling via viewBox="0 0 200 50"
+- Implemented activation-based visual encoding across all diagrams
+- Added tooltip interactivity and label collision handling
+
+### Layout & Styling
+- Integrated Tailwind CSS and resolved PostCSS issues
+- Established responsive split layout (flex-1)
+- Centralized diagram sizing and spacing logic
+- Ensured consistent rendering constraints across all visual components
+
+## Immediate Focus (Critical)
+
+### 1. Schema Consolidation (Highest Priority)
+- Add "type" field to all states:
+  - "primary" vs "modifier"
+- Audit all states for consistent metadata structure
+- Ensure naming consistency across:
+  - brain_regions
+  - ai_modules
+
+### 2. AI Module Taxonomy (Critical Structural Step)
+- Define canonical set of reusable AI modules
+- Eliminate ad hoc naming drift
+- Group modules into categories:
+  - attention
+  - memory
+  - control
+  - optimization
+  - I/O
+- Refactor all JSON files to align with this taxonomy
+
+### 3. Backend State Registry
+- Implement /api/states endpoint
+- Replace hardcoded frontend state list with dynamic fetch
+- Create cognitive_states/index.json registry file
 
 ## In Progress
 
-* Ensure `region.name` fields align precisely with frontend `regionPositions` mappings
-* Centralize common functions like `getFillColor()` and `normalizeName()` in shared utility module
-* Implement fallback rendering for unknown or missing brain regions and AI modules
-* Standardize interactivity across diagrams (hover highlights, optional click interactions)
-* Add temporary visual outlines for component boundary debugging during layout tuning
+### Data Integrity & Utilities
+- Ensure region.name aligns with frontend regionPositions
+- Centralize shared utilities:
+  - normalizeName()
+  - getFillColor()
+- Implement fallback handling for:
+  - unknown regions
+  - missing modules
 
-## Next Steps
+### Visualization Consistency
+- Standardize interaction patterns across all diagrams:
+  - hover
+  - highlighting
+  - tooltip structure
+- Remove remaining debug scaffolding and placeholder logic
 
-* Animate transitions between cognitive states (fade effects, morphing shapes, motion pathing)
-* Add metadata UI overlays or interactive modals to show additional AI module details
-* Expose `/api/states` endpoint to support dynamically listing and previewing available brain states
-* Wrap diagram views in responsive container with toggled layouts for small vs large screens
-* Create a test suite (unit and integration) for validating rendering logic and backend-frontend integration
-* Document rendering behavior, component structure, and input expectations in `docs/frontend.md`
+## Next Steps (High Value)
 
----
+### State Transitions & Dynamics
+- Animate transitions between cognitive states
+- Introduce temporal dimension (state evolution over time)
 
-**Current Status**  
-All five AI visualizations are now rendering cleanly with consistent sizing, spacing, and interactive affordances. Layout control has been centralized, tooltips and text staggering reduce clutter, and the application now visually reflects dynamic brain state data end-to-end. Remaining tasks center around debugging tools, modularization, and final polish before animation and testing layers are added.
+### UI/UX Enhancements
+- Add metadata overlays or expandable panels
+- Implement state comparison view (side-by-side states)
+- Add filtering by:
+  - category
+  - intensity
+  - type
 
+### Testing & Reliability
+- Add validation tests for schema compliance
+- Add frontend rendering tests for:
+  - brain diagrams
+  - AI diagrams
+- Add integration tests for API → UI flow
+
+### Documentation
+- Update docs/frontend.md with:
+  - component architecture
+  - data flow
+- Add docs/schema.md:
+  - formal definition of cognitive state model
+- Add docs/ai_taxonomy.md (after taxonomy is defined)
+
+## Future Extensions (Do Not Start Yet)
+- Multi-state blending (e.g. fatigue + caffeine)
+- Simulation engine for state transitions
+- AI-driven inference of cognitive state from inputs
+- Research framing / publishable write-up
+
+## Current Status
+The project has transitioned from a visualization prototype into a schema-driven cognitive state modeling system with AI analog mapping.
+
+All cognitive states are validated and structurally consistent. The visualization layer is stable and expressive. The primary remaining work is formalization:
+- schema completeness
+- module taxonomy
+- system coherence

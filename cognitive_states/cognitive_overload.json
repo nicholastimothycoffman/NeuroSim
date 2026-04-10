@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "cognitive_overload",
+  "description": "A state of excessive cognitive demand in which task load exceeds processing capacity, leading to queue saturation, degraded prioritization, and reduced executive control effectiveness.",
+  "brain_regions": [
     { "name": "prefrontal_cortex", "activation": 0.95 },
     { "name": "hippocampus", "activation": 0.6 }
   ],
@@ -9,5 +11,10 @@
     { "name": "memory_buffer", "activation": 0.95 },
     { "name": "error_handling", "activation": 0.6 },
     { "name": "throttling", "activation": 0.2 }
-  ]
+  ],
+  "metadata": {
+    "category": "cognitive",
+    "intensity": "high",
+    "source": "manual"
+  }
 }

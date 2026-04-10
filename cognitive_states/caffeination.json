@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "caffeination",
+  "description": "A transiently stimulated state characterized by increased alertness, faster decision-making, and elevated task engagement, often accompanied by reduced error monitoring and potential instability at higher activation levels.",
+  "brain_regions": [
     { "name": "reticular_formation", "activation": 0.9 },
     { "name": "prefrontal_cortex", "activation": 0.6 }
   ],
@@ -9,5 +11,10 @@
     { "name": "short_term_memory", "activation": 0.7 },
     { "name": "decision_speed", "activation": 0.9 },
     { "name": "error_monitoring", "activation": 0.3 }
-  ]
+  ],
+  "metadata": {
+    "category": "physiological",
+    "intensity": "medium",
+    "source": "manual"
+  }
 }

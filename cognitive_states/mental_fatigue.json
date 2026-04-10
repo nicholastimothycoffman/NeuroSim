@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "mental_fatigue",
+  "description": "A state of reduced cognitive efficiency marked by diminished executive activation, weakening signal clarity, memory decay, slower response timing, and declining processing precision.",
+  "brain_regions": [
     { "name": "prefrontal_cortex", "activation": 0.3 },
     { "name": "thalamus", "activation": 0.4 },
     { "name": "anterior_cingulate", "activation": 0.5 }
@@ -10,5 +12,10 @@
     { "name": "memory_decay", "activation": 0.8 },
     { "name": "processing_precision", "activation": 0.4 },
     { "name": "response_latency", "activation": 0.7 }
-  ]
+  ],
+  "metadata": {
+    "category": "cognitive",
+    "intensity": "medium",
+    "source": "manual"
+  }
 }

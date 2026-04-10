@@ -1,5 +1,7 @@
 {
-  "regions": [
+  "state_name": "fear",
+  "description": "An acute threat-response state characterized by rapid activation of defensive systems, suppression of non-essential processes, heightened risk prediction, and diminished executive regulation.",
+  "brain_regions": [
     { "name": "amygdala", "activation": 0.9 },
     { "name": "prefrontal_cortex", "activation": 0.3 }
   ],
@@ -9,5 +11,10 @@
     { "name": "escape_routing", "activation": 0.8 },
     { "name": "risk_prediction", "activation": 0.9 },
     { "name": "non_essential_suppression", "activation": 0.7 }
-  ]
+  ],
+  "metadata": {
+    "category": "emotional",
+    "intensity": "high",
+    "source": "manual"
+  }
 }
